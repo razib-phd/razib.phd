@@ -155,6 +155,7 @@
     font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.86rem;
     color:var(--navy); margin-bottom:5px; display:flex; align-items:baseline; gap:8px;
   }
+  .opp-region h4 .pin{width:14px; height:14px; color:var(--accent); flex-shrink:0; align-self:center;}
   .opp-region h4 .rank{
     font-size:0.62rem; letter-spacing:0.04em; text-transform:uppercase; color:#3FA772;
     font-weight:600; border:1px solid rgba(63,167,114,0.4); border-radius:3px; padding:1px 6px;
@@ -355,8 +356,14 @@
   .see-more{font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.85rem; margin-top:8px; display:inline-block;}
 
   /* ---- education ---- */
-  .edu-item{padding:16px 0; border-top:1px solid var(--rule);}
+  .edu-item{padding:16px 0; border-top:1px solid var(--rule); display:flex; gap:16px; align-items:flex-start;}
   .edu-item:last-child{border-bottom:1px solid var(--rule);}
+  .edu-icon{
+    width:34px; height:34px; border-radius:8px; flex-shrink:0; margin-top:2px;
+    background:rgba(44,82,130,0.08); color:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .edu-icon svg{width:18px; height:18px;}
   .edu-deg{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.02rem; color:var(--navy);}
   .edu-meta{font-size:0.88rem; color:var(--text-dim);}
 
@@ -374,7 +381,9 @@
     font-size:0.95rem;
   }
   @media (max-width:640px){ .contact-grid{grid-template-columns:1fr;} }
-  .contact-grid a{color:var(--text-on-navy); border-bottom:1px solid var(--rule-on-navy);}
+  .contact-grid a{color:var(--text-on-navy); border-bottom:1px solid var(--rule-on-navy); display:inline-flex; align-items:center; gap:10px; padding-bottom:2px;}
+  .contact-grid a svg{opacity:0.75; flex-shrink:0;}
+  .contact-grid a:hover svg{opacity:1;}
   .contact-grid a:hover{color:#fff; border-color:#fff; text-decoration:none;}
   .foot-note{
     margin-top:36px; padding-top:18px; border-top:1px solid var(--rule-on-navy);
@@ -592,19 +601,19 @@
       I'm open to relocating, in the following order of preference:</p>
     <div class="opp-regions">
       <div class="opp-region">
-        <h4>United States <span class="rank">Primary focus</span></h4>
+        <h4><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>United States <span class="rank">Primary focus</span></h4>
         <p>The largest concentration of labs working on aquaculture, food safety, and environmental sustainability research close to my own.</p>
       </div>
       <div class="opp-region">
-        <h4>European Union</h4>
+        <h4><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>European Union</h4>
         <p>An extension of my existing network — I trained at the University of Copenhagen and collaborated with EU‑ and DANIDA‑funded partners throughout my PhD.</p>
       </div>
       <div class="opp-region">
-        <h4>Australia &amp; New Zealand</h4>
+        <h4><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>Australia &amp; New Zealand</h4>
         <p>Strong overlap with my climate‑smart and salt‑pan aquaculture work, in a research culture close to the field‑based, consortium‑style projects I've worked on throughout my career.</p>
       </div>
       <div class="opp-region">
-        <h4>Canada</h4>
+        <h4><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>Canada</h4>
         <p>Active aquaculture, environmental, and food‑safety research groups working on questions closely related to my own.</p>
       </div>
     </div>
@@ -1067,17 +1076,26 @@
       <h2>Education</h2>
     </div>
     <div class="edu-item reveal">
-      <div class="edu-deg">PhD in Environmental Science &amp; Aquaculture</div>
-      <div class="edu-meta"><a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a>, Denmark · 2022</div>
-      <p class="muted" style="font-size:0.9rem; margin-top:6px;">Thesis: Characterization of pelagic, biological processes in aquaculture systems and their impact on health and quality of fish.</p>
+      <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M20.5 9.5V16"/></svg></div>
+      <div>
+        <div class="edu-deg">PhD in Environmental Science &amp; Aquaculture</div>
+        <div class="edu-meta"><a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a>, Denmark · 2022</div>
+        <p class="muted" style="font-size:0.9rem; margin-top:6px;">Thesis: Characterization of pelagic, biological processes in aquaculture systems and their impact on health and quality of fish.</p>
+      </div>
     </div>
     <div class="edu-item reveal">
-      <div class="edu-deg">M.S. in Fisheries Technology</div>
-      <div class="edu-meta"><a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a> · 2014</div>
+      <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M20.5 9.5V16"/></svg></div>
+      <div>
+        <div class="edu-deg">M.S. in Fisheries Technology</div>
+        <div class="edu-meta"><a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a> · 2014</div>
+      </div>
     </div>
     <div class="edu-item reveal">
-      <div class="edu-deg">B.S. in Fisheries</div>
-      <div class="edu-meta"><a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a> · 2012</div>
+      <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5-10-4.5Z"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M20.5 9.5V16"/></svg></div>
+      <div>
+        <div class="edu-deg">B.S. in Fisheries</div>
+        <div class="edu-meta"><a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a> · 2012</div>
+      </div>
     </div>
   </section>
 
@@ -1088,10 +1106,10 @@
     <div class="eyebrow" style="color:var(--text-on-navy-dim);">Get in touch</div>
     <h2>Contact</h2>
     <div class="contact-grid">
-      <a href="mailto:islamsr@plen.ku.dk">islamsr@plen.ku.dk</a>
-      <a href="mailto:razib.phd@gmail.com">razib.phd@gmail.com</a>
-      <a href="https://orcid.org/0000-0002-6916-4295" target="_blank" rel="noopener">ORCID: 0000‑0002‑6916‑4295</a>
-      <a href="https://www.linkedin.com/in/islamsr" target="_blank" rel="noopener">LinkedIn: /in/islamsr</a>
+      <a href="mailto:islamsr@plen.ku.dk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>islamsr@plen.ku.dk</a>
+      <a href="mailto:razib.phd@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>razib.phd@gmail.com</a>
+      <a href="https://orcid.org/0000-0002-6916-4295" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="9.5"/><path d="m8.5 12.5 2.3 2.3L15.5 10"/></svg>ORCID: 0000‑0002‑6916‑4295</a>
+      <a href="https://www.linkedin.com/in/islamsr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 8v9M9 5.2v.1"/><path d="M13 17v-5a2.5 2.5 0 0 1 5 0v5"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg>LinkedIn: /in/islamsr</a>
     </div>
   </div>
 </footer>
