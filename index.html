@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Seikh Razibul Islam, PhD — Aquatic AMR &amp; Environmental Health</title>
-<meta name="description" content="Seikh Razibul Islam, PhD — postdoctoral researcher working on aquatic antimicrobial resistance (AMR), environmental surveillance, One Health, and climate-resilient aquaculture in Bangladesh.">
+<meta name="description" content="Seikh Razibul Islam, PhD — independent researcher working on aquatic antimicrobial resistance (AMR), environmental surveillance, One Health, and climate-resilient aquaculture, seeking postdoctoral opportunities in the US, EU, Australia, Canada and NZ.">
 <meta name="author" content="Seikh Razibul Islam">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Seikh Razibul Islam, PhD — Aquatic AMR &amp; Environmental Health">
-<meta property="og:description" content="Postdoctoral researcher · Aquatic AMR · Environmental Surveillance · One Health · Climate-Resilient Aquaculture.">
+<meta property="og:description" content="Independent researcher · Aquatic AMR · Environmental Surveillance · One Health · Climate-Resilient Aquaculture · Seeking postdoctoral positions.">
 <meta property="og:image" content="https://razib-phd.github.io/razib.phd/og-card.png">
 <meta property="og:url" content="https://razib-phd.github.io/razib.phd/">
 <meta name="twitter:card" content="summary_large_image">
@@ -95,6 +95,56 @@
   .hero-contacts a{color:var(--text-on-navy);}
   .hero-contacts a:hover{color:#fff;}
 
+  /* ---- availability badge ---- */
+  .avail-badge{
+    display:inline-flex; align-items:center; gap:9px;
+    font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.86rem;
+    color:#fff;
+    background:rgba(63,167,114,0.14);
+    border:1px solid rgba(63,167,114,0.45);
+    padding:8px 16px; border-radius:20px;
+    margin-top:18px;
+  }
+  .avail-dot{
+    width:7px; height:7px; border-radius:50%; flex-shrink:0;
+    background:#3FA772; box-shadow:0 0 0 3px rgba(63,167,114,0.28);
+  }
+
+  /* ---- open to opportunities panel ---- */
+  .opp-panel{
+    background:var(--bg);
+    border:1px solid var(--rule);
+    border-left:4px solid #3FA772;
+    border-radius:8px;
+    padding:30px 32px;
+    box-shadow:0 14px 32px -22px rgba(27,42,65,0.3);
+  }
+  .opp-head{display:flex; align-items:center; gap:10px; margin-bottom:6px; flex-wrap:wrap;}
+  .opp-head h2{font-size:1.32rem; color:var(--navy);}
+  .opp-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.66rem;
+    letter-spacing:0.06em; text-transform:uppercase; color:#2E8B5C;
+    background:rgba(63,167,114,0.12); border:1px solid rgba(63,167,114,0.4);
+    padding:4px 10px; border-radius:14px;
+  }
+  .opp-pill::before{content:""; width:6px; height:6px; border-radius:50%; background:#3FA772;}
+  .opp-panel p.lede{margin-top:12px;}
+  .opp-regions{
+    margin-top:22px; display:grid; grid-template-columns:repeat(2, 1fr); gap:16px 28px;
+  }
+  @media (max-width:640px){ .opp-regions{grid-template-columns:1fr;} }
+  .opp-region{padding-top:14px; border-top:1px solid var(--rule);}
+  .opp-region h4{
+    font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.86rem;
+    color:var(--navy); margin-bottom:5px; display:flex; align-items:baseline; gap:8px;
+  }
+  .opp-region h4 .rank{
+    font-size:0.62rem; letter-spacing:0.04em; text-transform:uppercase; color:#3FA772;
+    font-weight:600; border:1px solid rgba(63,167,114,0.4); border-radius:3px; padding:1px 6px;
+  }
+  .opp-region p{margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;}
+
   /* ---- publication profile strip ---- */
   .stats{
     background:var(--bg-alt);
@@ -158,6 +208,8 @@
   .area{background:var(--bg); padding:24px 22px;}
   .area h3{font-size:1.02rem; margin-bottom:8px; color:var(--navy);}
   .area p{margin:0; font-size:0.92rem; color:var(--text-dim);}
+  .area{transition:background .2s ease;}
+  .area:hover{background:var(--bg-alt);}
 
   /* ---- current & future work (now/next) ---- */
   .now-next{
@@ -222,7 +274,9 @@
     display:grid;
     grid-template-columns:170px 1fr;
     gap:20px;
+    transition:padding-left .2s ease;
   }
+  .xp-item:hover{padding-left:6px;}
   @media (max-width:640px){ .xp-item{grid-template-columns:1fr; gap:6px;} }
   .xp-item:last-child{border-bottom:1px solid var(--rule);}
   .xp-date{font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.82rem; color:var(--text-dim); padding-top:3px;}
@@ -417,6 +471,7 @@
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">☰</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">Profile</a></li>
+      <li><a href="#opportunities">Opportunities</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#education">Education</a></li>
@@ -429,9 +484,10 @@
   <div class="wrap">
     <div class="hero-top">
       <div>
-        <div class="eyebrow" style="color:var(--text-on-navy-dim);">Postdoctoral Researcher · Aquatic AMR &amp; One Health</div>
+        <div class="eyebrow" style="color:var(--text-on-navy-dim);">Independent Researcher · Aquatic AMR &amp; One Health</div>
         <h1 class="hero-name">Seikh Razibul Islam, PhD</h1>
         <p class="hero-tagline">Aquatic AMR · Environmental Surveillance · One Health · Climate‑Resilient Aquaculture</p>
+        <div class="avail-badge"><span class="avail-dot"></span>Open to postdoctoral positions — see details below</div>
       </div>
       <div class="hero-contacts">
         <div><a href="mailto:islamsr@plen.ku.dk">islamsr@plen.ku.dk</a></div>
@@ -482,6 +538,37 @@
     <div class="stat"><b>10+ yr</b><span>Interdisciplinary field &amp; molecular research</span></div>
   </div>
 </div>
+
+<section class="wrap" id="opportunities" style="padding-top:48px; padding-bottom:48px;">
+  <div class="opp-panel reveal">
+    <div class="opp-head">
+      <h2>Open to Opportunities</h2>
+      <span class="opp-pill">Seeking postdoctoral positions</span>
+    </div>
+    <p class="lede">I am looking for a postdoctoral position where I can build on a decade of aquaculture,
+      environmental‑AMR, and One Health research toward an independent research program in environmental
+      surveillance and climate‑resilient food systems. My priority regions follow where that specific
+      combination of expertise best matches active funding and research infrastructure:</p>
+    <div class="opp-regions">
+      <div class="opp-region">
+        <h4>United States <span class="rank">Primary focus</span></h4>
+        <p>Deep, sustained federal investment in environmental AMR and One Health research (NIH, USDA‑NIFA, CDC‑affiliated centers) and a large number of aquaculture and food‑safety research groups aligned with my publication record.</p>
+      </div>
+      <div class="opp-region">
+        <h4>European Union</h4>
+        <p>Builds directly on my existing network from PhD training at the University of Copenhagen and prior EU‑ and DANIDA‑funded consortium work, within a research and policy environment where One Health AMR surveillance is an active funding priority.</p>
+      </div>
+      <div class="opp-region">
+        <h4>Australia &amp; New Zealand</h4>
+        <p>Leading centers for aquaculture science and coastal climate‑resilience research, with strong programmatic overlap with my work on climate‑smart, salt‑pan, and small‑scale aquaculture systems.</p>
+      </div>
+      <div class="opp-region">
+        <h4>Canada</h4>
+        <p>Well‑funded environmental and genomics research infrastructure (NSERC, Genome Canada) with active aquaculture and freshwater/coastal AMR surveillance programs.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <main id="main-content">
 
@@ -662,6 +749,19 @@
     <div class="section-head reveal">
       <div class="eyebrow">Career</div>
       <h2>Research experience</h2>
+    </div>
+
+    <div class="xp-item reveal">
+      <div class="xp-date">Aug 2024 – Present</div>
+      <div>
+        <div class="xp-role">Independent Researcher — Aquatic AMR &amp; Environmental Health</div>
+        <div class="xp-org">Self‑directed, unaffiliated · collaborating remotely with former project partners in Bangladesh and Denmark</div>
+        <ul>
+          <li>Continuing collaborative research from earlier WorldFish, BAU, and DANIDA‑consortium projects, leading and co‑leading manuscripts now submitted or under review (see Publications).</li>
+          <li>Preparing a portfolio of resistome, food‑safety, and climate‑resilience manuscripts for submission; mentoring co‑authors on data analysis and writing.</li>
+          <li>Applying for postdoctoral positions in aquatic AMR, environmental surveillance, and One Health research groups (see "Open to Opportunities" below).</li>
+        </ul>
+      </div>
     </div>
 
     <div class="xp-item reveal">
@@ -964,7 +1064,7 @@
   });
 
   // scroll-spy active nav link
-  const sections = ['about','experience','publications','education','contact']
+  const sections = ['about','opportunities','experience','publications','education','contact']
     .map(id=>document.getElementById(id)).filter(Boolean);
   const navMap = {};
   navLinks.querySelectorAll('a').forEach(a=>{ navMap[a.getAttribute('href').slice(1)] = a; });
