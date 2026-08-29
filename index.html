@@ -71,6 +71,8 @@
     display:flex; justify-content:space-between; align-items:flex-start;
     gap:24px; flex-wrap:wrap;
   }
+  .hero-id{display:flex; align-items:center; gap:22px; flex-wrap:wrap;}
+  @media (max-width:480px){ .hero-id{gap:16px;} }
   .hero-name{
     font-size:clamp(2rem, 4.2vw, 2.9rem);
     line-height:1.1;
@@ -94,6 +96,15 @@
   }
   .hero-contacts a{color:var(--text-on-navy);}
   .hero-contacts a:hover{color:#fff;}
+
+  /* ---- hero photo ---- */
+  .hero-photo{
+    width:112px; height:112px; border-radius:50%;
+    object-fit:cover; flex-shrink:0;
+    border:3px solid rgba(255,255,255,0.85);
+    box-shadow:0 10px 26px -10px rgba(0,0,0,0.5);
+  }
+  @media (max-width:640px){ .hero-photo{width:88px; height:88px;} }
 
   /* ---- availability badge ---- */
   .avail-badge{
@@ -483,11 +494,14 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-top">
-      <div>
-        <div class="eyebrow" style="color:var(--text-on-navy-dim);">Independent Researcher · Aquatic AMR &amp; One Health</div>
+      <div class="hero-id">
+        <img class="hero-photo" src="profile.jpg" alt="Portrait of Seikh Razibul Islam" width="128" height="128">
+        <div>
+          <div class="eyebrow" style="color:var(--text-on-navy-dim);">Independent Researcher · Aquatic AMR &amp; One Health</div>
         <h1 class="hero-name">Seikh Razibul Islam, PhD</h1>
         <p class="hero-tagline">Aquatic AMR · Environmental Surveillance · One Health · Climate‑Resilient Aquaculture</p>
         <div class="avail-badge"><span class="avail-dot"></span>Open to postdoctoral positions — see details below</div>
+        </div>
       </div>
       <div class="hero-contacts">
         <div><a href="mailto:islamsr@plen.ku.dk">islamsr@plen.ku.dk</a></div>
