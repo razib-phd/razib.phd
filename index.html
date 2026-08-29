@@ -159,6 +159,62 @@
   .area h3{font-size:1.02rem; margin-bottom:8px; color:var(--navy);}
   .area p{margin:0; font-size:0.92rem; color:var(--text-dim);}
 
+  /* ---- current & future work (now/next) ---- */
+  .now-next{
+    display:grid; grid-template-columns:1fr 1fr;
+    border:1px solid var(--rule); border-radius:8px;
+    overflow:hidden; margin-top:10px;
+    box-shadow:0 14px 32px -20px rgba(27,42,65,0.35);
+  }
+  @media (max-width:720px){ .now-next{grid-template-columns:1fr;} }
+  .nf-col{padding:30px 28px; position:relative;}
+  .nf-col.now{background:var(--navy); color:var(--text-on-navy);}
+  .nf-col.next{background:var(--bg-alt);}
+  .nf-badge{
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:'IBM Plex Sans', sans-serif; font-weight:600;
+    font-size:0.68rem; letter-spacing:0.09em; text-transform:uppercase;
+    padding:5px 12px; border-radius:20px;
+  }
+  .nf-badge::before{content:""; width:6px; height:6px; border-radius:50%; display:inline-block;}
+  .nf-col.now .nf-badge{background:rgba(255,255,255,0.12); color:#fff;}
+  .nf-col.now .nf-badge::before{background:#7FB8E0; box-shadow:0 0 0 3px rgba(127,184,224,0.25);}
+  .nf-col.next .nf-badge{background:rgba(44,82,130,0.1); color:var(--accent);}
+  .nf-col.next .nf-badge::before{background:var(--accent);}
+  .nf-col h3{
+    font-family:'Source Serif 4', serif; font-weight:600;
+    font-size:1.2rem; margin-top:16px; margin-bottom:2px;
+  }
+  .nf-col.now h3{color:#fff;}
+  .nf-col.next h3{color:var(--navy);}
+  .nf-col-sub{font-size:0.85rem; margin-top:2px;}
+  .nf-col.now .nf-col-sub{color:var(--text-on-navy-dim);}
+  .nf-col.next .nf-col-sub{color:var(--text-dim);}
+  ul.nf-list{list-style:none; margin:20px 0 0; padding:0;}
+  .nf-list li{
+    display:flex; gap:13px; padding:14px 0;
+    border-top:1px solid rgba(255,255,255,0.1);
+  }
+  .nf-col.next .nf-list li{border-top-color:var(--rule);}
+  .nf-list li:first-child{border-top:none; padding-top:2px;}
+  .nf-dot{width:6px; height:6px; border-radius:50%; margin-top:7px; flex-shrink:0;}
+  .nf-col.now .nf-dot{background:#7FB8E0;}
+  .nf-col.next .nf-dot{background:var(--accent);}
+  .nf-item-title{font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.9rem;}
+  .nf-col.now .nf-item-title{color:#fff;}
+  .nf-col.next .nf-item-title{color:var(--text);}
+  .nf-item-meta{font-size:0.82rem; line-height:1.55; margin-top:4px;}
+  .nf-col.now .nf-item-meta{color:var(--text-on-navy-dim);}
+  .nf-col.next .nf-item-meta{color:var(--text-dim);}
+  .nf-item-meta em{font-style:italic;}
+  .nf-status{
+    display:inline-block; font-family:'IBM Plex Sans', sans-serif; font-weight:600;
+    font-size:0.64rem; letter-spacing:0.03em; text-transform:uppercase;
+    padding:1px 7px; border-radius:3px; margin-left:7px; vertical-align:1px;
+  }
+  .nf-col.now .nf-status{border:1px solid rgba(255,255,255,0.35); color:var(--text-on-navy-dim);}
+  .nf-col.next .nf-status{border:1px solid var(--accent); color:var(--accent);}
+
   /* ---- experience ---- */
   .xp-item{
     padding:24px 0;
@@ -434,18 +490,52 @@
       <div class="eyebrow">Research Profile</div>
       <h2>What I work on</h2>
     </div>
-    <p class="lede reveal">I am an aquaculture and environmental scientist with over a decade of interdisciplinary
+    <p class="lede reveal">I am an aquaculture and environmental researcher with over a decade of interdisciplinary
       research experience, focused on the intersection of antimicrobial resistance (AMR), aquatic environmental
       health, and sustainable food systems. My work investigates how aquaculture systems shape, and are shaped
       by, microbial ecology, environmental contaminants, and management practices. I earned my PhD through a
-      double‑degree program at the University of Copenhagen (Denmark) and Patuakhali Science and Technology
-      University (Bangladesh).</p>
+      double‑degree program at the <a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a> (Denmark) and <a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a>
+      (Bangladesh), building on earlier training at <a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a>.</p>
     <p class="lede reveal">My research integrates molecular microbiology (qPCR, high‑throughput ARG/MGE profiling),
       analytical chemistry (GC‑MS, HPLC), environmental monitoring, and quantitative ecological analysis to address
       health and sustainability challenges in aquatic food production. I have worked within EU‑, USAID‑, and
-      DANIDA‑funded projects, trained field teams, mentored students, and published 18 peer‑reviewed papers. My
-      recent work centers on aquaculture resistomes, environmental AMR surveillance, and translating molecular
-      evidence into actionable monitoring and management approaches.</p>
+      DANIDA‑funded projects across national and international consortia, trained field teams, mentored students,
+      and published 18 peer‑reviewed papers. My recent work centers on aquaculture resistomes, environmental AMR
+      surveillance, and translating molecular evidence into actionable monitoring and management approaches.</p>
+
+    <div style="margin-top:40px;" class="reveal">
+      <div class="eyebrow" style="margin-bottom:14px;">Project impact &amp; achievements</div>
+      <div class="areas" style="margin-top:0;">
+        <div class="area">
+          <h3><a href="https://worldfishcenter.org/publication/artemia4bangladesh" target="_blank" rel="noopener">Artemia4Bangladesh</a> — WorldFish, EU‑funded</h3>
+          <p>Contributed field research to a climate‑smart innovation initiative introducing integrated
+            salt–Artemia production systems across Cox's Bazar, home to 95% of Bangladesh's crude salt output,
+            produced by roughly 50,000 artisanal salt farmers on ~27,000 ha. The project turned idle post‑harvest
+            salt pans into productive marine aquaculture, strengthening food and nutrition security for the
+            half‑million people connected to the salt‑farming economy. Designed field surveys and sampling
+            protocols and trained 20+ field staff in standardized data collection and quality control.</p>
+        </div>
+        <div class="area">
+          <h3><a href="https://worldfishcenter.org/project/harnessing-machine-learning-estimate-aquaculture-production-and-value-chain-performance-0" target="_blank" rel="noopener">Harnessing Machine Learning for Aquaculture</a> — <a href="https://worldfishcenter.org/" target="_blank" rel="noopener">WorldFish</a> / <a href="https://bau.edu.bd/" target="_blank" rel="noopener">BAU</a>, USAID‑funded</h3>
+          <p>Contributed to the first project of its kind to combine satellite remote sensing and machine
+            learning (Google Earth Engine, Landsat, MNDWI, Random Forest, SVM) with statistically representative
+            value‑chain surveys of 1,600+ farmers, traders, retailers, feed suppliers, and hatcheries to estimate
+            aquaculture production and its contribution to employment, nutrition, and the regional economy of
+            southwest Bangladesh. Work fed into public decision‑support data portals and online remote‑sensing/ML
+            training delivered to partner teams.</p>
+        </div>
+        <div class="area" style="grid-column:1 / -1;">
+          <h3><a href="https://drp.dfcentre.com/project/upgrading-pangas-and-tilapia-value-chains-bangladesh/" target="_blank" rel="noopener">Upgrading Pangas &amp; Tilapia Value Chains (Bangfish)</a> — DANIDA‑funded, led by <a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a> with <a href="https://bau.edu.bd/" target="_blank" rel="noopener">BAU</a> and <a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">PSTU</a></h3>
+          <p>Carried out PhD research within a ~10M DKK, multi‑country DANIDA consortium (2015–2020) spanning
+            the University of Copenhagen, PSTU, BAU, NMBU, DTU, SDU, University of Göttingen, and Eurofish,
+            aimed at upgrading Bangladesh's pangas and tilapia value chains for export‑quality standards.
+            Investigated the microbial and chemical causes of yellow discoloration and off‑flavor in farmed fish
+            using PCR, HPLC, and GC‑MS, generating evidence that informed farm‑management practices, water‑quality
+            interventions, and value‑chain governance recommendations; mentored Master's students in experimental
+            design and scientific writing.</p>
+        </div>
+      </div>
+    </div>
 
     <div style="margin-top:36px;" class="reveal">
       <div class="eyebrow" style="margin-bottom:12px;">Research trajectory</div>
@@ -459,19 +549,82 @@
         <span class="node">One Health &amp; adaptive management</span>
       </div>
     </div>
-  </section>
 
-  <section class="wrap" id="interests" style="padding-top:0;">
-    <div class="section-head reveal">
-      <div class="eyebrow">Looking ahead</div>
-      <h2>Future research interests</h2>
+    <div style="margin-top:44px;" class="reveal">
+      <div class="eyebrow" style="margin-bottom:14px;">Now &amp; next</div>
+      <div class="now-next">
+        <div class="nf-col now">
+          <span class="nf-badge">Current focus</span>
+          <h3>What I'm working on now</h3>
+          <div class="nf-col-sub">Five manuscripts in the pipeline, spanning resistome ecology to food safety and policy.</div>
+          <ul class="nf-list">
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Aquaculture resistome structuring<span class="nf-status">Submitted</span></div>
+                <div class="nf-item-meta">Testing whether local environmental filtering outweighs regional geography in shaping antibiotic‑resistance genes across farmed fish systems, with implications for surveillance design — <em>Environmental Pollution</em> (lead author); a companion study on spatial structuring of resistomes under contrasting management regimes is under review at <em>Environmental Research</em> (co‑first author).</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Bridging research and policy<span class="nf-status">Under review</span></div>
+                <div class="nf-item-meta">A systematic review and analytical framework connecting antibiotic‑resistance evidence to national aquaculture policy in Bangladesh — <em>Reviews in Aquaculture</em> (lead &amp; corresponding author).</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Decision‑support for hazard prioritization<span class="nf-status">Under review</span></div>
+                <div class="nf-item-meta">Co‑leading a national workflow for prioritizing hazardous aquaculture inputs for regulatory triage — <em>Journal of the World Aquaculture Society</em> (shared lead &amp; corresponding author).</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Small indigenous fish &amp; food security<span class="nf-status">Submitted</span></div>
+                <div class="nf-item-meta">Nutritional composition, quality, and cost‑effectiveness of small indigenous fish from Kaptai Lake, Bangladesh — <em>Journal of Food Composition and Analysis</em> (shared lead &amp; corresponding author).</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="nf-col next">
+          <span class="nf-badge">Looking ahead</span>
+          <h3>Where this is heading</h3>
+          <div class="nf-col-sub">Building toward a One Health research program linking molecular ecology, climate resilience, and policy.</div>
+          <ul class="nf-list">
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Environmental AMR surveillance</div>
+                <div class="nf-item-meta">Genomics‑informed, context‑aware surveillance frameworks for antimicrobial resistance in aquatic ecosystems.</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Climate‑resilient aquaculture &amp; food security<span class="nf-status">In prep</span></div>
+                <div class="nf-item-meta">Characterizing the resilience–efficiency paradox in seasonal salt‑pan aquaculture, and the wider drivers of livelihood resilience under climate stress.</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Low‑cost AI for smallholder aquaculture<span class="nf-status">In prep</span></div>
+                <div class="nf-item-meta">A systematic review of climate‑smart, offline‑capable artificial‑intelligence tools for smallholder aquaculture across the Global South.</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">One Health synthesis<span class="nf-status">In prep</span></div>
+                <div class="nf-item-meta">Translational research linking molecular ecology, environmental genomics, and quantitative ecology with policy and adaptive management — including a global synthesis of off‑flavor production mechanisms, "from gene to harvest."</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <ul class="plain interests reveal">
-      <li><span class="n">01</span><span>Environmental surveillance of antimicrobial resistance in aquatic ecosystems</span></li>
-      <li><span class="n">02</span><span>Climate‑resilient aquaculture and food security</span></li>
-      <li><span class="n">03</span><span>Translational research linking molecular ecology with policy and management</span></li>
-      <li><span class="n">04</span><span>Environmental genomics and quantitative ecology for context‑aware AMR surveillance</span></li>
-    </ul>
   </section>
 
   <section style="background:var(--bg-alt);">
@@ -514,8 +667,8 @@
     <div class="xp-item reveal">
       <div class="xp-date">May 2021 – Jul 2024</div>
       <div>
-        <div class="xp-role">Research Associate — WorldFish, Bangladesh</div>
-        <div class="xp-org">EU‑funded Artemia4Bangladesh Project</div>
+        <div class="xp-role">Research Associate — <a href="https://worldfishcenter.org/" target="_blank" rel="noopener">WorldFish</a>, Bangladesh</div>
+        <div class="xp-org">EU‑funded <a href="https://worldfishcenter.org/publication/artemia4bangladesh" target="_blank" rel="noopener">Artemia4Bangladesh Project</a></div>
         <ul>
           <li>Led field‑based research on aquaculture productivity, environmental conditions, and farmer‑level adaptation.</li>
           <li>Designed field surveys and sampling protocols; trained 20+ field staff in standardized data collection and quality control.</li>
@@ -527,8 +680,8 @@
     <div class="xp-item reveal">
       <div class="xp-date">Mar 2020 – May 2021</div>
       <div>
-        <div class="xp-role">Research Assistant — Bangladesh Agricultural University</div>
-        <div class="xp-org">USAID‑funded Machine Learning for Aquaculture Project</div>
+        <div class="xp-role">Research Assistant — <a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a></div>
+        <div class="xp-org">USAID‑funded <a href="https://worldfishcenter.org/project/harnessing-machine-learning-estimate-aquaculture-production-and-value-chain-performance-0" target="_blank" rel="noopener">Machine Learning for Aquaculture Project</a></div>
         <ul>
           <li>Conducted large‑scale aquaculture value‑chain research involving 1,600+ stakeholders.</li>
           <li>Applied digital platforms and remote sensing for aquaculture‑resource mapping and monitoring.</li>
@@ -540,8 +693,8 @@
     <div class="xp-item reveal">
       <div class="xp-date">Oct 2015 – Sep 2019</div>
       <div>
-        <div class="xp-role">PhD Research Fellow — Patuakhali Science and Technology University</div>
-        <div class="xp-org">DANIDA‑funded Upgrading Pangas &amp; Tilapia Value Chains Project</div>
+        <div class="xp-role">PhD Research Fellow — <a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a></div>
+        <div class="xp-org">DANIDA‑funded <a href="https://drp.dfcentre.com/project/upgrading-pangas-and-tilapia-value-chains-bangladesh/" target="_blank" rel="noopener">Upgrading Pangas &amp; Tilapia Value Chains Project</a></div>
         <ul>
           <li>Investigated microbial and chemical causes of yellow discoloration and off‑flavor in farmed fish.</li>
           <li>Applied PCR, HPLC, and GC‑MS; conducted controlled experiments to evaluate mitigation strategies.</li>
@@ -728,16 +881,16 @@
     </div>
     <div class="edu-item reveal">
       <div class="edu-deg">PhD in Environmental Science &amp; Aquaculture</div>
-      <div class="edu-meta">University of Copenhagen, Denmark · 2022</div>
+      <div class="edu-meta"><a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a>, Denmark · 2022</div>
       <p class="muted" style="font-size:0.9rem; margin-top:6px;">Thesis: Characterisation of pelagic biological processes in aquaculture systems and their impact on fish health and quality.</p>
     </div>
     <div class="edu-item reveal">
       <div class="edu-deg">M.S. in Fisheries Technology</div>
-      <div class="edu-meta">Bangladesh Agricultural University · 2014</div>
+      <div class="edu-meta"><a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a> · 2014</div>
     </div>
     <div class="edu-item reveal">
       <div class="edu-deg">B.S. in Fisheries</div>
-      <div class="edu-meta">Patuakhali Science and Technology University · 2012</div>
+      <div class="edu-meta"><a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a> · 2012</div>
     </div>
   </section>
 
