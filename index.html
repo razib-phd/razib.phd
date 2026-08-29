@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seikh Razibul Islam, PhD — Aquatic AMR &amp; Environmental Health</title>
-<meta name="description" content="Seikh Razibul Islam, PhD — independent researcher working on aquatic antimicrobial resistance (AMR), environmental surveillance, One Health, and climate-resilient aquaculture, seeking postdoctoral opportunities in the US, EU, Australia, Canada and NZ.">
+<title>Seikh Razibul Islam, PhD — Aquaculture Systems, Food Safety &amp; Environmental Sustainability</title>
+<meta name="description" content="Seikh Razibul Islam, PhD — independent researcher working across aquaculture production, food safety and quality, environmental monitoring (including AMR surveillance), and the socio-economic dimensions of aquatic food systems, seeking postdoctoral opportunities in the US, EU, Australia, Canada and NZ.">
 <meta name="author" content="Seikh Razibul Islam">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Seikh Razibul Islam, PhD — Aquatic AMR &amp; Environmental Health">
-<meta property="og:description" content="Independent researcher · Aquatic AMR · Environmental Surveillance · One Health · Climate-Resilient Aquaculture · Seeking postdoctoral positions.">
+<meta property="og:title" content="Seikh Razibul Islam, PhD — Aquaculture Systems, Food Safety &amp; Environmental Sustainability">
+<meta property="og:description" content="Independent researcher · Aquaculture Production · Food Safety &amp; Quality · Environmental Monitoring · Socio-Economics &amp; Policy · Seeking postdoctoral positions.">
 <meta property="og:image" content="https://razib-phd.github.io/razib.phd/og-card.png">
 <meta property="og:url" content="https://razib-phd.github.io/razib.phd/">
 <meta name="twitter:card" content="summary_large_image">
@@ -69,9 +69,13 @@
   }
   .hero-top{
     display:flex; justify-content:space-between; align-items:flex-start;
-    gap:24px; flex-wrap:wrap;
+    gap:24px; flex-wrap:nowrap;
   }
-  .hero-id{display:flex; align-items:center; gap:22px; flex-wrap:wrap;}
+  @media (max-width:760px){
+    .hero-top{flex-direction:column; align-items:flex-start;}
+    .hero-contacts{text-align:left;}
+  }
+  .hero-id{display:flex; align-items:center; gap:22px; flex-wrap:wrap; min-width:0;}
   @media (max-width:480px){ .hero-id{gap:16px;} }
   .hero-name{
     font-size:clamp(2rem, 4.2vw, 2.9rem);
@@ -93,6 +97,7 @@
     color:var(--text-on-navy-dim);
     text-align:right;
     line-height:1.9;
+    flex-shrink:0;
   }
   .hero-contacts a{color:var(--text-on-navy);}
   .hero-contacts a:hover{color:#fff;}
@@ -497,10 +502,10 @@
       <div class="hero-id">
         <img class="hero-photo" src="profile.jpg" alt="Portrait of Seikh Razibul Islam" width="128" height="128">
         <div>
-          <div class="eyebrow" style="color:var(--text-on-navy-dim);">Independent Researcher · Aquatic AMR &amp; One Health</div>
+          <div class="eyebrow" style="color:var(--text-on-navy-dim);">Independent Researcher · Aquaculture Systems &amp; Environmental Sustainability</div>
         <h1 class="hero-name">Seikh Razibul Islam, PhD</h1>
-        <p class="hero-tagline">Aquatic AMR · Environmental Surveillance · One Health · Climate‑Resilient Aquaculture</p>
-        <div class="avail-badge"><span class="avail-dot"></span>Open to postdoctoral positions — see details below</div>
+        <p class="hero-tagline">Aquaculture Production · Food Safety &amp; Quality · Environmental Monitoring · Socio‑Economics &amp; Policy</p>
+        <div class="avail-badge"><span class="avail-dot"></span>Open to postdoctoral positions</div>
         </div>
       </div>
       <div class="hero-contacts">
@@ -559,28 +564,31 @@
       <h2>Open to Opportunities</h2>
       <span class="opp-pill">Seeking postdoctoral positions</span>
     </div>
-    <p class="lede">I am looking for a postdoctoral position where I can build on a decade of aquaculture,
-      environmental‑AMR, and One Health research toward an independent research program in environmental
-      surveillance and climate‑resilient food systems. My priority regions follow where that specific
-      combination of expertise best matches active funding and research infrastructure:</p>
+    <p class="lede">I'm looking for a postdoctoral position in a lab working on aquaculture systems, food safety
+      and environmental management, or the socio‑economic dimensions of aquatic food production — somewhere
+      I can put hands‑on experience in molecular and analytical methods (qPCR‑based ARG/MGE profiling,
+      GC‑MS/HPLC), environmental monitoring, and large‑scale field‑ and survey‑based research to immediate
+      use, while growing toward more independent, policy‑relevant research under a host mentor's guidance.
+      I'm open to relocating, in the following order of preference:</p>
     <div class="opp-regions">
       <div class="opp-region">
         <h4>United States <span class="rank">Primary focus</span></h4>
-        <p>Deep, sustained federal investment in environmental AMR and One Health research (NIH, USDA‑NIFA, CDC‑affiliated centers) and a large number of aquaculture and food‑safety research groups aligned with my publication record.</p>
+        <p>The largest concentration of labs working on aquaculture, food safety, and environmental sustainability research close to my own.</p>
       </div>
       <div class="opp-region">
         <h4>European Union</h4>
-        <p>Builds directly on my existing network from PhD training at the University of Copenhagen and prior EU‑ and DANIDA‑funded consortium work, within a research and policy environment where One Health AMR surveillance is an active funding priority.</p>
+        <p>An extension of my existing network — I trained at the University of Copenhagen and collaborated with EU‑ and DANIDA‑funded partners throughout my PhD.</p>
       </div>
       <div class="opp-region">
         <h4>Australia &amp; New Zealand</h4>
-        <p>Leading centers for aquaculture science and coastal climate‑resilience research, with strong programmatic overlap with my work on climate‑smart, salt‑pan, and small‑scale aquaculture systems.</p>
+        <p>Strong overlap with my climate‑smart and salt‑pan aquaculture work, in a research culture close to the field‑based, consortium‑style projects I've worked on throughout my career.</p>
       </div>
       <div class="opp-region">
         <h4>Canada</h4>
-        <p>Well‑funded environmental and genomics research infrastructure (NSERC, Genome Canada) with active aquaculture and freshwater/coastal AMR surveillance programs.</p>
+        <p>Active aquaculture, environmental, and food‑safety research groups working on questions closely related to my own.</p>
       </div>
     </div>
+    <p class="muted" style="font-size:0.88rem; margin-top:22px; padding-top:18px; border-top:1px solid var(--rule);">Full CV, publication list, and references available on request — <a href="mailto:islamsr@plen.ku.dk">get in touch</a>.</p>
   </div>
 </section>
 
@@ -592,17 +600,21 @@
       <h2>What I work on</h2>
     </div>
     <p class="lede reveal">I am an aquaculture and environmental researcher with over a decade of interdisciplinary
-      research experience, focused on the intersection of antimicrobial resistance (AMR), aquatic environmental
-      health, and sustainable food systems. My work investigates how aquaculture systems shape, and are shaped
-      by, microbial ecology, environmental contaminants, and management practices. I earned my PhD through a
-      double‑degree program at the <a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a> (Denmark) and <a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a>
+      research experience spanning aquaculture production systems, food safety and quality, environmental
+      monitoring, and the socio‑economic and policy dimensions of aquatic food systems. My work investigates
+      how aquaculture systems perform and are managed, how safe and nutritious their products are, how they
+      interact with the surrounding environment, and how farmer behavior, markets, and regulation shape all
+      of the above. I earned my PhD at the
+      <a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a> (Denmark), in collaboration with <a href="https://www.pstu.ac.bd/" target="_blank" rel="noopener">Patuakhali Science and Technology University</a>
       (Bangladesh), building on earlier training at <a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a>.</p>
     <p class="lede reveal">My research integrates molecular microbiology (qPCR, high‑throughput ARG/MGE profiling),
-      analytical chemistry (GC‑MS, HPLC), environmental monitoring, and quantitative ecological analysis to address
-      health and sustainability challenges in aquatic food production. I have worked within EU‑, USAID‑, and
+      analytical chemistry (GC‑MS, HPLC), environmental monitoring, quantitative and spatial analysis
+      (GIS/remote sensing, statistical modeling), and large‑scale household‑survey methods to address production,
+      safety, environmental, and economic challenges in aquatic food systems. I have worked within EU‑, USAID‑, and
       DANIDA‑funded projects across national and international consortia, trained field teams, mentored students,
-      and published 18 peer‑reviewed papers. My recent work centers on aquaculture resistomes, environmental AMR
-      surveillance, and translating molecular evidence into actionable monitoring and management approaches.</p>
+      and published 18 peer‑reviewed papers. My current work spans environmental AMR surveillance, food safety
+      and quality science, and the socio‑economic drivers of chemical‑input use in aquaculture — translating
+      evidence into actionable monitoring, management, and policy approaches.</p>
 
     <div style="margin-top:40px;" class="reveal">
       <div class="eyebrow" style="margin-bottom:14px;">Project impact &amp; achievements</div>
@@ -641,12 +653,11 @@
     <div style="margin-top:36px;" class="reveal">
       <div class="eyebrow" style="margin-bottom:12px;">Research trajectory</div>
       <div class="trajectory">
-        <span class="node">Aquaculture health &amp; diagnostics</span><span class="arrow">→</span>
-        <span class="node">Microbial &amp; environmental quality</span><span class="arrow">→</span>
-        <span class="node">Molecular surveillance</span><span class="arrow">→</span>
-        <span class="node">Food safety &amp; hazards</span><span class="arrow">→</span>
-        <span class="node">AMR / resistome research</span><span class="arrow">→</span>
-        <span class="node">Environmental change &amp; climate resilience</span><span class="arrow">→</span>
+        <span class="node">Aquaculture production &amp; health</span><span class="arrow">→</span>
+        <span class="node">Food safety &amp; quality</span><span class="arrow">→</span>
+        <span class="node">Environmental monitoring &amp; AMR</span><span class="arrow">→</span>
+        <span class="node">Value chains &amp; policy</span><span class="arrow">→</span>
+        <span class="node">Climate resilience &amp; sustainability</span><span class="arrow">→</span>
         <span class="node">One Health &amp; adaptive management</span>
       </div>
     </div>
@@ -657,7 +668,7 @@
         <div class="nf-col now">
           <span class="nf-badge">Current focus</span>
           <h3>What I'm working on now</h3>
-          <div class="nf-col-sub">Five manuscripts in the pipeline, spanning resistome ecology to food safety and policy.</div>
+          <div class="nf-col-sub">Manuscripts currently in the pipeline, spanning aquaculture systems, food safety, environmental science, and policy.</div>
           <ul class="nf-list">
             <li>
               <span class="nf-dot"></span>
@@ -692,13 +703,13 @@
         <div class="nf-col next">
           <span class="nf-badge">Looking ahead</span>
           <h3>Where this is heading</h3>
-          <div class="nf-col-sub">Building toward a One Health research program linking molecular ecology, climate resilience, and policy.</div>
+          <div class="nf-col-sub">Building toward a broader research program linking aquaculture systems, environmental sustainability, food safety, and policy.</div>
           <ul class="nf-list">
             <li>
               <span class="nf-dot"></span>
               <div>
-                <div class="nf-item-title">Environmental AMR surveillance</div>
-                <div class="nf-item-meta">Genomics‑informed, context‑aware surveillance frameworks for antimicrobial resistance in aquatic ecosystems.</div>
+                <div class="nf-item-title">Environmental monitoring &amp; AMR surveillance</div>
+                <div class="nf-item-meta">Genomics‑informed, context‑aware surveillance frameworks for antimicrobial resistance and other environmental hazards in aquatic ecosystems.</div>
               </div>
             </li>
             <li>
@@ -706,6 +717,13 @@
               <div>
                 <div class="nf-item-title">Climate‑resilient aquaculture &amp; food security<span class="nf-status">In prep</span></div>
                 <div class="nf-item-meta">Characterizing the resilience–efficiency paradox in seasonal salt‑pan aquaculture, and the wider drivers of livelihood resilience under climate stress.</div>
+              </div>
+            </li>
+            <li>
+              <span class="nf-dot"></span>
+              <div>
+                <div class="nf-item-title">Policy &amp; value‑chain economics</div>
+                <div class="nf-item-meta">A growing quantitative research line on the socio‑economic and regulatory drivers of aquaculture input use — including a large‑scale household survey (n=4,555) — linking farmer behavior, market informality, and policy design.</div>
               </div>
             </li>
             <li>
@@ -736,24 +754,28 @@
       </div>
       <div class="areas reveal">
         <div class="area">
-          <h3>Antimicrobial Resistance &amp; One Health</h3>
-          <p>ARG/MGE surveillance (high‑throughput qPCR) · environmental AMR monitoring and risk assessment · aquaculture antimicrobial use and policy synthesis.</p>
+          <h3>Aquaculture Production &amp; Systems</h3>
+          <p>Growth performance and stocking‑density trials · reproductive biology and hatchery protocols · feed composition and water‑exchange management · biosecurity and disease management.</p>
         </div>
         <div class="area">
-          <h3>Aquatic Environmental Health</h3>
-          <p>Microbial ecology, water quality, pathogen detection (PCR, qPCR, culture) · fish health and disease ecology · heavy metal and contaminant risk assessment.</p>
+          <h3>Food Safety, Quality &amp; Analytical Chemistry</h3>
+          <p>Volatile/aroma compound profiling (GC‑MS) · heavy‑metal and contaminant risk assessment (HPLC, ICP‑MS) · nutritional composition analysis · ARG/MGE and antimicrobial‑resistance surveillance (high‑throughput qPCR).</p>
         </div>
         <div class="area">
-          <h3>Sustainable &amp; Climate‑Resilient Aquaculture</h3>
-          <p>Climate‑smart interventions, coastal production systems · livelihood resilience and socio‑ecological assessment (RAPFISH, AHP) · biodiversity–livelihood trade‑offs.</p>
+          <h3>Environmental Monitoring &amp; Sustainability</h3>
+          <p>Water quality and microbial ecology (PCR, qPCR, culture) · wetland and floodplain dynamics · climate‑smart and climate‑resilient aquaculture · biodiversity–livelihood trade‑offs.</p>
         </div>
         <div class="area">
-          <h3>Food Quality &amp; Analytical Chemistry</h3>
-          <p>Volatile/aroma compound profiling (GC‑MS) · pigment and metabolite analysis (HPLC) · food‑safety risk assessment.</p>
+          <h3>Socio‑Economics, Policy &amp; Value Chains</h3>
+          <p>Value‑chain and market analysis · regulatory economics and input‑market informality · decision‑support frameworks for hazard prioritization · large‑scale household‑survey research.</p>
+        </div>
+        <div class="area">
+          <h3>Fisheries Management &amp; Conservation</h3>
+          <p>Sustainability assessment (RAPFISH, AHP) · capture‑fisheries and wetland resource dynamics · conservation aquaculture and reproductive biology.</p>
         </div>
         <div class="area">
           <h3>Quantitative, Spatial &amp; Digital Research</h3>
-          <p>Multivariate ecology, time‑series analysis, ecological modeling · GIS/remote sensing (Landsat, MNDWI) · random forest &amp; spatial analysis · KoBo Toolbox digital surveys.</p>
+          <p>GIS/remote sensing (Landsat, MNDWI) · machine learning (random forest) and spatial analysis · KoBo Toolbox digital surveys · statistical and causal‑inference modeling.</p>
         </div>
       </div>
     </div>
@@ -773,7 +795,7 @@
         <ul>
           <li>Continuing collaborative research from earlier WorldFish, BAU, and DANIDA‑consortium projects, leading and co‑leading manuscripts now submitted or under review (see Publications).</li>
           <li>Preparing a portfolio of resistome, food‑safety, and climate‑resilience manuscripts for submission; mentoring co‑authors on data analysis and writing.</li>
-          <li>Applying for postdoctoral positions in aquatic AMR, environmental surveillance, and One Health research groups (see "Open to Opportunities" below).</li>
+          <li>Applying for postdoctoral positions in environmental AMR, molecular ecology, and climate‑resilient aquaculture (see <a href="#opportunities">Open to Opportunities</a> above).</li>
         </ul>
       </div>
     </div>
@@ -813,6 +835,31 @@
           <li>Investigated microbial and chemical causes of yellow discoloration and off‑flavor in farmed fish.</li>
           <li>Applied PCR, HPLC, and GC‑MS; conducted controlled experiments to evaluate mitigation strategies.</li>
           <li>Mentored Master's students in experimental design, data analysis, and scientific writing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-item reveal">
+      <div class="xp-date">Apr 2014 – Jul 2015</div>
+      <div>
+        <div class="xp-role">Technical Advisor &amp; Sales Executive — Lion Feeds Limited</div>
+        <div class="xp-org">Aquaculture feed industry · Mymensingh, Bangladesh</div>
+        <ul>
+          <li>Provided technical advisory services and hands‑on training to fish farmers and extension staff on pond management, feeding strategy optimization, and fish health.</li>
+          <li>Gathered field‑based feedback on product performance to inform the company's R&amp;D and product‑development decisions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="xp-item reveal">
+      <div class="xp-date">Jan 2013 – Jun 2014</div>
+      <div>
+        <div class="xp-role">Research Assistant — <a href="https://bau.edu.bd/" target="_blank" rel="noopener">Bangladesh Agricultural University</a></div>
+        <div class="xp-org">BFRI‑funded <a href="https://fri.gov.bd/" target="_blank" rel="noopener">Impact of Aquaculture Drugs and Chemicals on Aquatic Ecology and Productivity Project</a></div>
+        <ul>
+          <li>Investigated the impact of aquaculture drugs and chemicals on water quality and fish health through field sampling and laboratory analysis.</li>
+          <li>Performed water‑quality and fish analyses using standard analytical techniques and instrumentation, and conducted statistical analysis of the resulting data.</li>
+          <li>Co‑authored scientific reports and training materials that informed guidelines for sustainable input use.</li>
         </ul>
       </div>
     </div>
@@ -996,7 +1043,7 @@
     <div class="edu-item reveal">
       <div class="edu-deg">PhD in Environmental Science &amp; Aquaculture</div>
       <div class="edu-meta"><a href="https://www.ku.dk/en" target="_blank" rel="noopener">University of Copenhagen</a>, Denmark · 2022</div>
-      <p class="muted" style="font-size:0.9rem; margin-top:6px;">Thesis: Characterisation of pelagic biological processes in aquaculture systems and their impact on fish health and quality.</p>
+      <p class="muted" style="font-size:0.9rem; margin-top:6px;">Thesis: Characterization of pelagic, biological processes in aquaculture systems and their impact on health and quality of fish.</p>
     </div>
     <div class="edu-item reveal">
       <div class="edu-deg">M.S. in Fisheries Technology</div>
