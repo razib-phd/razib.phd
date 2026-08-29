@@ -355,6 +355,29 @@
   .pub a.doi{font-family:'IBM Plex Sans', sans-serif; font-size:0.8rem;}
   .see-more{font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.85rem; margin-top:8px; display:inline-block;}
 
+  /* ---- featured research ---- */
+  .featured-papers{display:flex; flex-direction:column; gap:18px; margin-top:18px;}
+  .featured-paper{
+    background:var(--bg); border:1px solid var(--rule); border-radius:8px;
+    padding:26px 28px;
+  }
+  .fp-head{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 14px; margin-bottom:2px;}
+  .fp-title{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.08rem; color:var(--navy);}
+  .fp-title .tag{
+    display:inline-block; font-family:'IBM Plex Sans', sans-serif; font-weight:600;
+    font-size:0.68rem; letter-spacing:0.02em; text-transform:uppercase;
+    color:var(--accent); border:1px solid var(--accent); border-radius:3px;
+    padding:1px 6px; margin-left:8px; vertical-align:2px;
+  }
+  .fp-meta{font-size:0.82rem; color:var(--text-dim); font-style:italic; white-space:nowrap;}
+  .fp-summary{font-size:0.93rem; color:var(--text-dim); margin-top:10px; line-height:1.6;}
+  .fp-why{margin-top:16px; padding-top:14px; border-top:1px solid var(--rule); font-size:0.88rem; color:var(--text-dim); line-height:1.55;}
+  .fp-why b{
+    color:var(--accent); font-family:'IBM Plex Sans', sans-serif; font-weight:600;
+    font-size:0.7rem; letter-spacing:0.05em; text-transform:uppercase;
+    display:block; margin-bottom:5px;
+  }
+
   /* ---- education ---- */
   .edu-item{padding:16px 0; border-top:1px solid var(--rule); display:flex; gap:16px; align-items:flex-start;}
   .edu-item:last-child{border-bottom:1px solid var(--rule);}
@@ -675,6 +698,36 @@
             using PCR, HPLC, and GC‑MS, generating evidence that informed farm‑management practices, water‑quality
             interventions, and value‑chain governance recommendations; mentored Master's students in experimental
             design and scientific writing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;" class="reveal">
+      <div class="eyebrow" style="margin-bottom:14px;">Featured Research</div>
+      <div class="featured-papers">
+        <div class="featured-paper">
+          <div class="fp-head">
+            <div class="fp-title"><a href="https://doi.org/10.21161/mjm.211132" target="_blank" rel="noopener">Mapping microbial risk across Bangladesh's aquaculture regions</a><span class="tag">Lead author</span></div>
+            <div class="fp-meta">Malaysian Journal of Microbiology, 2021</div>
+          </div>
+          <p class="fp-summary">Surveyed water quality across 38 pangasius and tilapia farms in five of Bangladesh's major aquaculture regions, using PCR to screen for fecal‑indicator bacteria, pathogenic <em>Vibrio</em> species, and cyanobacterial toxin genes. Pangasius farms carried significantly higher fecal‑coliform loads than tilapia farms, and <em>Vibrio</em>‑related genes were detected in three‑quarters of farms sampled — though not the specific genes tied to human or fish disease outbreaks. Genes for the cyanobacterial toxin microcystin were also more prevalent in pangasius systems.</p>
+          <div class="fp-why"><b>Why it matters</b>One of the first regional baselines of microbial water‑quality risk across Bangladesh's aquaculture belt, with a direct, actionable recommendation: routine, species‑aware water monitoring that farms and regulators could implement immediately.</div>
+        </div>
+        <div class="featured-paper">
+          <div class="fp-head">
+            <div class="fp-title"><a href="https://doi.org/10.1007/s13280-026-02415-w" target="_blank" rel="noopener">A framework for deciding when the data will never be enough</a><span class="tag">Co‑first · corresponding</span></div>
+            <div class="fp-meta">Ambio, 2026</div>
+          </div>
+          <p class="fp-summary">Most environmental‑management tools assume that with enough monitoring, uncertainty eventually shrinks to something manageable. Using 35 years of wetland‑fisheries data from Bangladesh, this study shows that assumption often doesn't hold: disagreement between plausible models alone explained 40% of forecast uncertainty, with prediction ranges wider than anything seen historically. Rather than chasing false precision, the paper proposes a diagnostic framework that maps what's actually driving the uncertainty and prepares decision‑makers for a range of plausible futures instead of a single forecast.</p>
+          <div class="fp-why"><b>Why it matters</b>Built to be transferable beyond wetland fisheries to any data‑limited, fast‑changing system — directly relevant to environmental and aquaculture management anywhere monitoring records are incomplete, which describes most of the Global South.</div>
+        </div>
+        <div class="featured-paper">
+          <div class="fp-head">
+            <div class="fp-title"><a href="https://doi.org/10.1007/s12562-024-01847-1" target="_blank" rel="noopener">Why farmed fish taste different depending on where they grow</a><span class="tag">Lead author</span></div>
+            <div class="fp-meta">Fisheries Science, 2024</div>
+          </div>
+          <p class="fp-summary">Compared the aroma‑compound profile of pangasius and tilapia raised in inland freshwater ponds versus coastal brackish‑water ponds, across two seasons. Found 35 distinct volatile compounds in the fish flesh, with concentrations shifting sharply by season and region — the widest swing was nearly 30‑fold in inland‑farmed tilapia. Coastal fish consistently carried fewer of these compounds, a pattern linked to tidal flushing diluting the agricultural run‑off and phytoplankton believed to be the source.</p>
+          <div class="fp-why"><b>Why it matters</b>Points to specific, manageable levers — site selection, water exchange — that could reduce the off‑flavor issues affecting consumer acceptance and export‑market competitiveness for farmed fish.</div>
         </div>
       </div>
     </div>
