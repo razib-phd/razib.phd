@@ -222,6 +222,13 @@
   .areas{display:grid; grid-template-columns:repeat(2, 1fr); gap:1px; background:var(--rule); border:1px solid var(--rule);}
   @media (max-width:640px){ .areas{grid-template-columns:1fr;} }
   .area{background:var(--bg); padding:24px 22px;}
+  .area-icon{
+    width:38px; height:38px; border-radius:9px;
+    background:rgba(44,82,130,0.08);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:14px; color:var(--accent);
+  }
+  .area-icon svg{width:20px; height:20px;}
   .area h3{font-size:1.02rem; margin-bottom:8px; color:var(--navy);}
   .area p{margin:0; font-size:0.92rem; color:var(--text-dim);}
   .area{transition:background .2s ease;}
@@ -296,6 +303,19 @@
   @media (max-width:640px){ .xp-item{grid-template-columns:1fr; gap:6px;} }
   .xp-item:last-child{border-bottom:1px solid var(--rule);}
   .xp-date{font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.82rem; color:var(--text-dim); padding-top:3px;}
+  .xp-item > div:last-child{
+    position:relative;
+    padding-left:20px;
+    border-left:2px solid var(--rule);
+  }
+  .xp-item > div:last-child::before{
+    content:"";
+    position:absolute; left:-6px; top:5px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--accent);
+  }
+  .xp-item:first-child > div:last-child::before{background:var(--accent);}
+  .xp-current > div:last-child::before{background:var(--accent);}
   .xp-role{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.08rem; margin-bottom:4px; color:var(--navy);}
   .xp-org{font-size:0.88rem; color:var(--accent); margin-bottom:10px;}
   .xp-item ul{margin:0; padding-left:18px; font-size:0.93rem; color:var(--text-dim);}
@@ -554,7 +574,7 @@
     <div class="stat"><b>18</b><span>Peer-reviewed publications</span></div>
     <div class="stat"><b>7</b><span>First-author (5 sole first-author)</span></div>
     <div class="stat"><b>3+</b><span>Corresponding-author roles</span></div>
-    <div class="stat"><b>10+ yr</b><span>Interdisciplinary field &amp; molecular research</span></div>
+    <div class="stat"><b>10+ yr</b><span>Interdisciplinary field, lab &amp; policy research</span></div>
   </div>
 </div>
 
@@ -754,26 +774,32 @@
       </div>
       <div class="areas reveal">
         <div class="area">
+          <div class="area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-5 8-5c3 0 4.5 1.8 5.5 3.2M22 12s-3.5 5-8 5c-3 0-4.5-1.8-5.5-3.2"/><path d="M18 9.5V7.8M15.5 12l3-1M15.5 12l3 1"/><circle cx="4.3" cy="11.6" r=".9" fill="currentColor" stroke="none"/></svg></div>
           <h3>Aquaculture Production &amp; Systems</h3>
           <p>Growth performance and stocking‑density trials · reproductive biology and hatchery protocols · feed composition and water‑exchange management · biosecurity and disease management.</p>
         </div>
         <div class="area">
+          <div class="area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.5 17a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M9 2h6M8 14h8"/></svg></div>
           <h3>Food Safety, Quality &amp; Analytical Chemistry</h3>
           <p>Volatile/aroma compound profiling (GC‑MS) · heavy‑metal and contaminant risk assessment (HPLC, ICP‑MS) · nutritional composition analysis · ARG/MGE and antimicrobial‑resistance surveillance (high‑throughput qPCR).</p>
         </div>
         <div class="area">
+          <div class="area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11.5a6 6 0 1 1-12 0C6 8.5 12 2 12 2Z"/><path d="M9.5 16a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
           <h3>Environmental Monitoring &amp; Sustainability</h3>
           <p>Water quality and microbial ecology (PCR, qPCR, culture) · wetland and floodplain dynamics · climate‑smart and climate‑resilient aquaculture · biodiversity–livelihood trade‑offs.</p>
         </div>
         <div class="area">
+          <div class="area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/><path d="M4 9l6-4 6 4 4-3"/></svg></div>
           <h3>Socio‑Economics, Policy &amp; Value Chains</h3>
           <p>Value‑chain and market analysis · regulatory economics and input‑market informality · decision‑support frameworks for hazard prioritization · large‑scale household‑survey research.</p>
         </div>
         <div class="area">
+          <div class="area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
           <h3>Fisheries Management &amp; Conservation</h3>
           <p>Sustainability assessment (RAPFISH, AHP) · capture‑fisheries and wetland resource dynamics · conservation aquaculture and reproductive biology.</p>
         </div>
         <div class="area">
+          <div class="area-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
           <h3>Quantitative, Spatial &amp; Digital Research</h3>
           <p>GIS/remote sensing (Landsat, MNDWI) · machine learning (random forest) and spatial analysis · KoBo Toolbox digital surveys · statistical and causal‑inference modeling.</p>
         </div>
@@ -787,15 +813,15 @@
       <h2>Research experience</h2>
     </div>
 
-    <div class="xp-item reveal">
+    <div class="xp-item reveal xp-current">
       <div class="xp-date">Aug 2024 – Present</div>
       <div>
-        <div class="xp-role">Independent Researcher — Aquatic AMR &amp; Environmental Health</div>
+        <div class="xp-role">Independent Researcher — Aquaculture Systems &amp; Environmental Sustainability</div>
         <div class="xp-org">Self‑directed, unaffiliated · collaborating remotely with former project partners in Bangladesh and Denmark</div>
         <ul>
           <li>Continuing collaborative research from earlier WorldFish, BAU, and DANIDA‑consortium projects, leading and co‑leading manuscripts now submitted or under review (see Publications).</li>
           <li>Preparing a portfolio of resistome, food‑safety, and climate‑resilience manuscripts for submission; mentoring co‑authors on data analysis and writing.</li>
-          <li>Applying for postdoctoral positions in environmental AMR, molecular ecology, and climate‑resilient aquaculture (see <a href="#opportunities">Open to Opportunities</a> above).</li>
+          <li>Applying for postdoctoral positions in aquaculture systems, food safety, and environmental sustainability research (see <a href="#opportunities">Open to Opportunities</a> above).</li>
         </ul>
       </div>
     </div>
@@ -875,23 +901,11 @@
 
       <div class="pub-filter reveal" role="group" aria-label="Filter publications by topic">
         <button data-filter="all" class="active">All</button>
-        <button data-filter="amr">AMR &amp; Molecular</button>
         <button data-filter="food">Aquaculture &amp; Food Quality</button>
         <button data-filter="env">Environmental &amp; Sustainability</button>
+        <button data-filter="amr">AMR &amp; Molecular</button>
         <button data-filter="progress">In Progress</button>
         <button data-filter="misc">Earlier Work</button>
-      </div>
-
-      <div class="pub-group reveal" data-cat="amr">
-        <h3>Antimicrobial Resistance, Molecular &amp; Environmental Health</h3>
-        <div class="pub">
-          <div class="authors">Lassen, S.B., Ahsan, M.E., <b>Islam, S.R.</b>, Zhou, X.‑Y., Razzak, M.A., Su, J.‑Q., &amp; Brandt, K.K. (2022). Prevalence of antibiotic resistance genes in <em>Pangasianodon hypophthalmus</em> and <em>Oreochromis niloticus</em> aquaculture production systems in Bangladesh.</div>
-          <div class="venue">Science of the Total Environment, 813, 151915. <a class="doi" href="https://doi.org/10.1016/j.scitotenv.2021.151915" target="_blank" rel="noopener">doi.org/10.1016/j.scitotenv.2021.151915</a></div>
-        </div>
-        <div class="pub">
-          <div class="authors"><b>Islam, S.R.</b>, Ahsan, E., Haque, M.M., Razzak, M.A., Schlüter, L., Podduturi, R., &amp; Jørgensen, N.O.G. (2021). Microbial water quality in pangasius and tilapia aquaculture systems in five regions of Bangladesh.<span class="tag">Lead author</span></div>
-          <div class="venue">Malaysian Journal of Microbiology, 17(4), 435–451. <a class="doi" href="https://doi.org/10.21161/mjm.211132" target="_blank" rel="noopener">doi.org/10.21161/mjm.211132</a></div>
-        </div>
       </div>
 
       <div class="pub-group reveal" data-cat="food">
@@ -918,8 +932,20 @@
         </div>
       </div>
 
+      <div class="pub-group reveal" data-cat="amr">
+        <h3>Antimicrobial Resistance, Molecular &amp; Environmental Health</h3>
+        <div class="pub">
+          <div class="authors">Lassen, S.B., Ahsan, M.E., <b>Islam, S.R.</b>, Zhou, X.‑Y., Razzak, M.A., Su, J.‑Q., &amp; Brandt, K.K. (2022). Prevalence of antibiotic resistance genes in <em>Pangasianodon hypophthalmus</em> and <em>Oreochromis niloticus</em> aquaculture production systems in Bangladesh.</div>
+          <div class="venue">Science of the Total Environment, 813, 151915. <a class="doi" href="https://doi.org/10.1016/j.scitotenv.2021.151915" target="_blank" rel="noopener">doi.org/10.1016/j.scitotenv.2021.151915</a></div>
+        </div>
+        <div class="pub">
+          <div class="authors"><b>Islam, S.R.</b>, Ahsan, E., Haque, M.M., Razzak, M.A., Schlüter, L., Podduturi, R., &amp; Jørgensen, N.O.G. (2021). Microbial water quality in pangasius and tilapia aquaculture systems in five regions of Bangladesh.<span class="tag">Lead author</span></div>
+          <div class="venue">Malaysian Journal of Microbiology, 17(4), 435–451. <a class="doi" href="https://doi.org/10.21161/mjm.211132" target="_blank" rel="noopener">doi.org/10.21161/mjm.211132</a></div>
+        </div>
+      </div>
+
       <div class="pub-group reveal" data-cat="progress">
-        <h3>Current AMR &amp; Resistome Research — submitted / under review</h3>
+        <h3>In Progress — Submitted &amp; Under Review</h3>
         <div class="pub">
           <div class="authors"><b>Islam, S.R.</b>, et al. Local environmental filtering outweighs regional geography in aquaculture resistomes: implications for antimicrobial resistance surveillance.<span class="tag">Lead author</span></div>
           <div class="venue">Environmental Pollution — submitted.</div>
@@ -931,14 +957,6 @@
       </div>
 
       <div class="pub-more" id="pubMore">
-        <div class="pub-group" data-cat="amr">
-          <h3>Antimicrobial Resistance, Molecular &amp; Environmental Health — continued</h3>
-          <div class="pub">
-            <div class="authors">Mannan, M., <b>Islam, S.R.</b>, Osman, M.H., Rahman, M.K., Uddin, M.N., Kamal, M., &amp; Reza, M.S. (2020). Antibacterial activity of oxytetracycline on microbial ecology of Nile tilapia gastrointestinal tract under laboratory condition.</div>
-            <div class="venue">Aquaculture Research, 51(5), 2125–2133. <a class="doi" href="https://doi.org/10.1111/are.14563" target="_blank" rel="noopener">doi.org/10.1111/are.14563</a></div>
-          </div>
-        </div>
-
         <div class="pub-group" data-cat="food">
           <h3>Aquaculture, Food Quality &amp; Analytical Chemistry — continued</h3>
           <div class="pub">
@@ -964,6 +982,14 @@
           <div class="pub">
             <div class="authors">Hasan, M.R., Rahman, M.M., <b>Islam, S.R.</b>, Anisuzzaman, M., Riya, K.K., Arai, T., Ngah, N., &amp; Hossain, M.B. (2026). Development and evaluation of climate-smart aquaculture interventions to enhance livelihood resilience in salt farming communities of Bangladesh.</div>
             <div class="venue">Aquaculture International, 34, 116. <a class="doi" href="https://doi.org/10.1007/s10499-026-02514-1" target="_blank" rel="noopener">doi.org/10.1007/s10499-026-02514-1</a></div>
+          </div>
+        </div>
+
+        <div class="pub-group" data-cat="amr">
+          <h3>Antimicrobial Resistance, Molecular &amp; Environmental Health — continued</h3>
+          <div class="pub">
+            <div class="authors">Mannan, M., <b>Islam, S.R.</b>, Osman, M.H., Rahman, M.K., Uddin, M.N., Kamal, M., &amp; Reza, M.S. (2020). Antibacterial activity of oxytetracycline on microbial ecology of Nile tilapia gastrointestinal tract under laboratory condition.</div>
+            <div class="venue">Aquaculture Research, 51(5), 2125–2133. <a class="doi" href="https://doi.org/10.1111/are.14563" target="_blank" rel="noopener">doi.org/10.1111/are.14563</a></div>
           </div>
         </div>
 
@@ -996,7 +1022,7 @@
         </div>
 
         <div class="pub-group" data-cat="progress">
-          <h3>Current AMR &amp; Resistome Research — continued</h3>
+          <h3>In Progress — Submitted &amp; Under Review (continued)</h3>
           <div class="pub">
             <div class="authors">Mim, S.A., <b>Islam, S.R.</b>, et al. Spatial structuring of aquaculture resistomes under contrasting regional management regimes: implications for context‑aware environmental surveillance.<span class="tag">Co‑first author</span></div>
             <div class="venue">Environmental Research — submitted.</div>
