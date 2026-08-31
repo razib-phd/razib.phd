@@ -408,6 +408,13 @@
   .contact-grid a svg{opacity:0.75; flex-shrink:0;}
   .contact-grid a:hover svg{opacity:1;}
   .contact-grid a:hover{color:#fff; border-color:#fff; text-decoration:none;}
+  .footer-meta{
+    margin-top:32px; padding-top:20px; border-top:1px solid var(--rule-on-navy);
+    display:flex; align-items:center; flex-wrap:wrap; gap:10px;
+    font-size:0.8rem; color:var(--text-on-navy-dim);
+  }
+  .footer-meta-sep{opacity:0.5;}
+  .visitor-badge{vertical-align:middle; display:block; border-radius:3px;}
   .foot-note{
     margin-top:36px; padding-top:18px; border-top:1px solid var(--rule-on-navy);
     font-family:'IBM Plex Sans', sans-serif; font-size:0.78rem; color:var(--text-on-navy-dim);
@@ -1164,6 +1171,12 @@
       <a href="https://orcid.org/0000-0002-6916-4295" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="9.5"/><path d="m8.5 12.5 2.3 2.3L15.5 10"/></svg>ORCID: 0000‑0002‑6916‑4295</a>
       <a href="https://www.linkedin.com/in/razibphd/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 8v9M9 5.2v.1"/><path d="M13 17v-5a2.5 2.5 0 0 1 5 0v5"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg>LinkedIn: /in/razibphd</a>
     </div>
+
+    <div class="footer-meta">
+      <span id="lastUpdated">Last updated: —</span>
+      <span class="footer-meta-sep">·</span>
+      <img class="visitor-badge" src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Frazib-phd.github.io%2Frazib.phd%2F&label=Visitors&countColor=%232C5282&style=flat" alt="Visitor count" loading="lazy" height="20">
+    </div>
   </div>
 </footer>
 
@@ -1243,6 +1256,21 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); revealIO.unobserve(e.target); } });
   }, {threshold:0.12});
   revealEls.forEach(el=>revealIO.observe(el));
+
+  // live "last updated" date, pulled from the repo's most recent commit
+  (function(){
+    const el = document.getElementById('lastUpdated');
+    if(!el) return;
+    fetch('https://api.github.com/repos/razib-phd/razib.phd/commits?per_page=1')
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        const iso = data && data[0] && data[0].commit && data[0].commit.committer && data[0].commit.committer.date;
+        if(!iso) return;
+        const d = new Date(iso);
+        el.textContent = 'Last updated: ' + d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+      })
+      .catch(() => { el.textContent = ''; });
+  })();
 </script>
 
 </body>
