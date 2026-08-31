@@ -414,7 +414,10 @@
   .foot-note{
     margin-top:36px; padding-top:18px; border-top:1px solid var(--rule-on-navy);
     font-family:'IBM Plex Sans', sans-serif; font-size:0.78rem; color:var(--text-on-navy-dim);
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px 16px;
   }
+  .foot-note img{display:block; opacity:0.85; border-radius:3px;}
+  @media (max-width:480px){ .foot-note{justify-content:flex-start;} }
 
   a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
 
@@ -1177,6 +1180,10 @@
       <a href="mailto:razib.phd@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>razib.phd@gmail.com</a>
       <a href="https://orcid.org/0000-0002-6916-4295" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="9.5"/><path d="m8.5 12.5 2.3 2.3L15.5 10"/></svg>ORCID: 0000‑0002‑6916‑4295</a>
       <a href="https://www.linkedin.com/in/razibphd/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 8v9M9 5.2v.1"/><path d="M13 17v-5a2.5 2.5 0 0 1 5 0v5"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg>LinkedIn: /in/razibphd</a>
+    </div>
+    <div class="foot-note">
+      <span>Last updated: August 2026</span>
+      <img src="https://api.visitorbadge.io/api/visitors?user=razib-phd&amp;repo=razib.phd&amp;labelColor=%231B2A41&amp;countColor=%232C5282&amp;label=Visitors&amp;style=flat-square" alt="Visitor count" height="20">
     </div>
   </div>
 </footer>
