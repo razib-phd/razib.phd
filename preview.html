@@ -397,7 +397,7 @@
   }
   /* ---- publication toggle ---- */
   html.js .pub-more{display:none;}
-  .pub-more.open{display:block;}
+  html.js .pub-more.open{display:block;}
   .toggle-btn{
     font-family:'IBM Plex Sans', sans-serif; font-weight:500; font-size:0.82rem;
     background:none; border:1px solid var(--navy); color:var(--navy);
@@ -456,7 +456,7 @@
 
   /* ---- subtle reveal on scroll ---- */
   html.js .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease;}
-  .reveal.in{opacity:1; transform:translateY(0);}
+  html.js .reveal.in{opacity:1; transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){
     html.js .reveal{opacity:1; transform:none; transition:none;}
     .back-to-top{transition:none;}
@@ -603,6 +603,7 @@
   .fp-title{display:flex; align-items:flex-start; gap:8px;}
   .fp-title .tag{flex:none; margin-top:3px;}
   .authors .tag{white-space:nowrap;}
+  .authors .tag{margin-left:8px;}
 
   /* ---- fix round 8: audit synthesis A/B/C and minor batch ---- */
   :root{ --panel-dark:#14263F; --card-radius:10px; --card-border:1px solid var(--rule); --card-shadow:0 1px 3px rgba(27,42,65,0.06); }
