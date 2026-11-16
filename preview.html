@@ -677,6 +677,21 @@
   html:not([data-theme="dark"]) .nf-col.now .nf-sub,
   html:not([data-theme="dark"]) .nf-col.next .nf-sub,
   html:not([data-theme="dark"]) .nf-col-sub{color:#42536D;}
+
+  /* ---- gallery (round 12) ---- */
+  .gallery-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:16px;}
+  @media (max-width:1000px){ .gallery-grid{grid-template-columns:repeat(3, 1fr);} }
+  @media (max-width:640px){ .gallery-grid{grid-template-columns:repeat(2, 1fr); gap:12px;} }
+  .g-item{margin:0;}
+  .g-item img{width:100%; height:180px; object-fit:cover; border-radius:8px; display:block; cursor:pointer; border:1px solid var(--rule);}
+  @media (max-width:640px){ .g-item img{height:130px;} }
+  .g-item figcaption{font-size:0.82rem; color:var(--text-dim); margin-top:6px; line-height:1.45;}
+  .lightbox{position:fixed; inset:0; background:rgba(10,16,24,0.93); display:none; align-items:center; justify-content:center; z-index:300; padding:24px;}
+  .lightbox.open{display:flex;}
+  .lightbox figure{margin:0; max-width:1020px; text-align:center;}
+  .lightbox img{max-width:100%; max-height:80vh; border-radius:8px;}
+  .lightbox figcaption{color:#EDEFF2; font-size:0.95rem; margin-top:12px;}
+  .lightbox-close{position:absolute; top:16px; right:22px; background:none; border:none; color:#fff; font-size:2rem; line-height:1; cursor:pointer;}
 </style>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;} .pub-more{display:block !important;}</style></noscript>
 </head>
@@ -1074,7 +1089,38 @@
     </div>
   </section>
 
-  <section class="altband" id="publications">
+    <section class="wrap" id="gallery">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2>Research in pictures</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <figure class="g-item"><img src="gallery/participatory-mapping.jpg" alt="Participatory mapping with farmers" loading="lazy"><figcaption>Participatory mapping with farmers</figcaption></figure>
+      <figure class="g-item"><img src="gallery/focus-group.jpg" alt="Focus group discussion with a coastal community" loading="lazy"><figcaption>Focus group discussion with a coastal community</figcaption></figure>
+      <figure class="g-item"><img src="gallery/pond-harvest.jpg" alt="Pond harvest in progress" loading="lazy"><figcaption>Pond harvest in progress</figcaption></figure>
+      <figure class="g-item"><img src="gallery/salt-pans.jpg" alt="Salt pans of Cox's Bazar" loading="lazy"><figcaption>Salt pans of Cox's Bazar</figcaption></figure>
+      <figure class="g-item"><img src="gallery/field-discussion.jpg" alt="Field discussion over a working lunch" loading="lazy"><figcaption>Field discussion over a working lunch</figcaption></figure>
+      <figure class="g-item"><img src="gallery/shrimp-sorting.jpg" alt="Sorting the shrimp harvest" loading="lazy"><figcaption>Sorting the shrimp harvest</figcaption></figure>
+      <figure class="g-item"><img src="gallery/artemia-tanks.jpg" alt="Artemia culture tanks" loading="lazy"><figcaption>Artemia culture tanks</figcaption></figure>
+      <figure class="g-item"><img src="gallery/tilapia-artemia.jpg" alt="Farmers with tilapia and harvested Artemia" loading="lazy"><figcaption>Farmers with tilapia and harvested Artemia</figcaption></figure>
+      <figure class="g-item"><img src="gallery/artemia-beaker.jpg" alt="Freshly harvested Artemia biomass" loading="lazy"><figcaption>Freshly harvested Artemia biomass</figcaption></figure>
+      <figure class="g-item"><img src="gallery/artemia-exhibition.jpg" alt="Artemia4Bangladesh exhibition model" loading="lazy"><figcaption>Artemia4Bangladesh exhibition model</figcaption></figure>
+      <figure class="g-item"><img src="gallery/women-farmers-event.jpg" alt="Women farmers at a project event" loading="lazy"><figcaption>Women farmers at a project event</figcaption></figure>
+      <figure class="g-item"><img src="gallery/team-photo.jpg" alt="Project team group photo" loading="lazy"><figcaption>Project team group photo</figcaption></figure>
+      <figure class="g-item"><img src="gallery/team-day.jpg" alt="Team day with colleagues" loading="lazy"><figcaption>Team day with colleagues</figcaption></figure>
+      <figure class="g-item"><img src="gallery/delegation-pond.jpg" alt="Delegation group photo at a pond site" loading="lazy"><figcaption>Delegation group photo at a pond site</figcaption></figure>
+      <figure class="g-item"><img src="gallery/workshop-group.jpg" alt="Workshop group photo" loading="lazy"><figcaption>Workshop group photo</figcaption></figure>
+      <figure class="g-item"><img src="gallery/presentation-session.jpg" alt="Project presentation session" loading="lazy"><figcaption>Project presentation session</figcaption></figure>
+      <figure class="g-item"><img src="gallery/steering-meeting.jpg" alt="Steering meeting" loading="lazy"><figcaption>Steering meeting</figcaption></figure>
+      <figure class="g-item"><img src="gallery/phd-presentation-2016.jpg" alt="Presenting during the PhD period, 2016" loading="lazy"><figcaption>Presenting during the PhD period, 2016</figcaption></figure>
+      <figure class="g-item"><img src="gallery/copenhagen-freezer.jpg" alt="Retrieving samples from an ultra-low freezer, University of Copenhagen" loading="lazy"><figcaption>Retrieving samples from an ultra-low freezer, University of Copenhagen</figcaption></figure>
+      <figure class="g-item"><img src="gallery/lab-measurement.jpg" alt="Water quality measurement in the laboratory" loading="lazy"><figcaption>Water quality measurement in the laboratory</figcaption></figure>
+      <figure class="g-item"><img src="gallery/prawn-harvest.jpg" alt="A proud harvest of freshwater prawns" loading="lazy"><figcaption>A proud harvest of freshwater prawns</figcaption></figure>
+      <figure class="g-item"><img src="gallery/fish-week-rally.jpg" alt="National Fish Week 2023 rally" loading="lazy"><figcaption>National Fish Week 2023 rally</figcaption></figure>
+    </div>
+  </section>
+
+<section class="altband" id="publications">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Selected Output</div>
@@ -1526,5 +1572,29 @@
   });
 </script>
 
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <figure>
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+  <script>
+  (function(){
+    var lb = document.getElementById('lightbox');
+    var img = document.getElementById('lightboxImg');
+    var cap = document.getElementById('lightboxCap');
+    document.querySelectorAll('.g-item img').forEach(function(el){
+      el.addEventListener('click', function(){
+        img.src = el.src; img.alt = el.alt; cap.textContent = el.alt;
+        lb.classList.add('open');
+      });
+    });
+    function close(){ lb.classList.remove('open'); img.src = ''; }
+    document.getElementById('lightboxClose').addEventListener('click', close);
+    lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+  })();
+  </script>
 </body>
 </html>
