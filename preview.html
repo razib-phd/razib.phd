@@ -652,8 +652,8 @@
   @media (max-width:640px){ .fund-row{grid-template-columns:1fr;} }
 
   /* ---- fix round 10: hero welcome; Now & Next complete treatment ---- */
-  .hero-welcome{max-width:360px; margin-left:28px; border-left:2px solid var(--accent); padding-left:18px;}
-  .hero-welcome p{font-family:'Source Serif 4', serif; font-size:1.02rem; line-height:1.65; color:var(--text-on-navy); margin:0;}
+  .hero-welcome{max-width:370px; margin-left:28px; margin-top:92px; border-left:2px solid var(--accent); padding-left:18px;}
+  .hero-welcome p{font-family:'Source Serif 4', serif; font-size:1.13rem; line-height:1.65; color:var(--text-on-navy); margin:0;}
   @media (max-width:760px){ .hero-welcome{margin-left:0; margin-top:22px; max-width:560px;} }
   /* items stacked; the markup classes get the styling the older class names carried */
   .nf-list li{display:block;}
@@ -672,6 +672,11 @@
   [data-theme="dark"] .nf-col.now .nf-title{color:#fff;}
   [data-theme="dark"] .nf-col.now .nf-sub{color:var(--text-on-navy-dim);}
   [data-theme="dark"] .nf-col.now .nf-list li{border-top-color:rgba(255,255,255,0.12);}
+
+  /* ---- fix round 11: Now & Next light-mode text contrast polish ---- */
+  html:not([data-theme="dark"]) .nf-col.now .nf-sub,
+  html:not([data-theme="dark"]) .nf-col.next .nf-sub,
+  html:not([data-theme="dark"]) .nf-col-sub{color:#42536D;}
 </style>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;} .pub-more{display:block !important;}</style></noscript>
 </head>
