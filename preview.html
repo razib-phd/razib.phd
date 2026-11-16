@@ -651,6 +651,27 @@
   [data-theme="dark"] .fund-proj{color:#EDEFF2;}
   @media (max-width:640px){ .fund-row{grid-template-columns:1fr;} }
 
+  /* ---- fix round 10: hero welcome; Now & Next complete treatment ---- */
+  .hero-welcome{max-width:360px; margin-left:28px; border-left:2px solid var(--accent); padding-left:18px;}
+  .hero-welcome p{font-family:'Source Serif 4', serif; font-size:1.02rem; line-height:1.65; color:var(--text-on-navy); margin:0;}
+  @media (max-width:760px){ .hero-welcome{margin-left:0; margin-top:22px; max-width:560px;} }
+  /* items stacked; the markup classes get the styling the older class names carried */
+  .nf-list li{display:block;}
+  .nf-title{font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.95rem; line-height:1.45; color:var(--text);}
+  .nf-sub{font-size:0.9rem; line-height:1.6; margin-top:4px; color:var(--text-dim);}
+  .nf-col-sub{font-size:0.9rem; line-height:1.6;}
+  /* Current focus on its light panel (light mode): dark text throughout */
+  .nf-col.now .nf-badge{background:rgba(44,82,130,0.1); color:var(--accent);}
+  .nf-col.now .nf-badge::before{background:var(--accent); box-shadow:none;}
+  .nf-col.now .nf-col-sub{color:var(--text-dim);}
+  .nf-col.now .nf-list li{border-top-color:var(--rule);}
+  /* Current focus on its dark panel (dark mode): light text throughout */
+  [data-theme="dark"] .nf-col.now .nf-badge{background:rgba(255,255,255,0.12); color:#fff;}
+  [data-theme="dark"] .nf-col.now .nf-badge::before{background:#7FB8E0; box-shadow:0 0 0 3px rgba(127,184,224,0.25);}
+  [data-theme="dark"] .nf-col.now .nf-col-sub{color:var(--text-on-navy-dim);}
+  [data-theme="dark"] .nf-col.now .nf-title{color:#fff;}
+  [data-theme="dark"] .nf-col.now .nf-sub{color:var(--text-on-navy-dim);}
+  [data-theme="dark"] .nf-col.now .nf-list li{border-top-color:rgba(255,255,255,0.12);}
 </style>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;} .pub-more{display:block !important;}</style></noscript>
 </head>
@@ -688,6 +709,9 @@
         <p class="hero-tagline"><span class="seg">Aquaculture Systems ·</span> <span class="seg">Environmental Risk ·</span> <span class="seg">Quantitative &amp; Computational Research</span></p>
         <p class="hero-stats-line"><span class="seg">PhD, University of Copenhagen ·</span> <span class="seg">20 peer‑reviewed publications ·</span> <span class="seg">10+ years research experience</span></p>
         </div>
+      </div>
+      <div class="hero-welcome">
+        <p>Welcome. This page gathers my research in one place, from pond-level fieldwork in Bangladesh to collaborations across Europe. Thank you for visiting, and I am always glad to hear from fellow researchers.</p>
       </div>
     </div>
   </div>
@@ -1333,7 +1357,7 @@
         <div class="ref-name">Mohammad Mahfujul Haque</div>
         <div class="ref-role">Professor, Department of Aquaculture, Bangladesh Agricultural University, Mymensingh, Bangladesh</div>
         <a class="ref-mail" href="mailto:mmhaque.aq@bau.edu.bd">mmhaque.aq@bau.edu.bd</a><br>
-        <span class="ref-tag">Senior co-author</span>
+        <span class="ref-tag">PhD supervisor</span>
       </div>
     </div>
   </section>
