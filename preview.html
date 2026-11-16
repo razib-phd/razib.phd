@@ -209,23 +209,6 @@
   }
   .nf-col.next .nf-list li{border-top-color:var(--rule);}
   .nf-list li:first-child{border-top:none; padding-top:2px;}
-  .nf-dot{width:6px; height:6px; border-radius:50%; margin-top:7px; flex-shrink:0;}
-  .nf-col.now .nf-dot{background:#7FB8E0;}
-  .nf-col.next .nf-dot{background:var(--accent);}
-  .nf-item-title{font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.9rem;}
-  .nf-col.now .nf-item-title{color:#fff;}
-  .nf-col.next .nf-item-title{color:var(--text);}
-  .nf-item-meta{font-size:0.82rem; line-height:1.55; margin-top:4px;}
-  .nf-col.now .nf-item-meta{color:var(--text-on-navy-dim);}
-  .nf-col.next .nf-item-meta{color:var(--text-dim);}
-  .nf-item-meta em{font-style:italic;}
-  .nf-status{
-    display:inline-block; font-family:'IBM Plex Sans', sans-serif; font-weight:600;
-    font-size:0.64rem; letter-spacing:0.03em; text-transform:uppercase;
-    padding:1px 7px; border-radius:3px; margin-left:7px; vertical-align:1px;
-  }
-  .nf-col.now .nf-status{border:1px solid rgba(255,255,255,0.35); color:var(--text-on-navy-dim);}
-  .nf-col.next .nf-status{border:1px solid var(--accent); color:var(--accent);}
 
   /* ---- experience ---- */
   .xp-item{
@@ -556,8 +539,6 @@
   .trajectory{gap:10px 8px;}
   .tstep{display:inline-flex; align-items:center; gap:8px;}
   .hero-tagline, .hero-stats-line{text-wrap:balance;}
-  .nf-item-title{display:flex; align-items:flex-start; gap:8px;}
-  .nf-status{flex:none; margin-left:0; margin-top:2px;}
   .nav-mark{white-space:nowrap;}
   @media (max-width:900px){
     .nav-links{
@@ -699,6 +680,20 @@
   .hero-welcome{border-left-color:#C2A059;}
   [data-theme="dark"] nav.site-nav{background:#0A2029;}
   [data-theme="dark"] header.hero{background:linear-gradient(180deg, #0A2029 0%, #123744 100%);}
+
+  /* ---- round 17: review fixes (hero dark border, teal footer, Now & Next split) ---- */
+  [data-theme="dark"] header.hero{border-bottom:3px solid #C2A059;}
+  footer{background:#0E2A38; border-top:3px solid #C2A059;}
+  [data-theme="dark"] footer{background:#0A2029;}
+  .nf-col.now{background:#0E2A38; color:var(--text-on-navy);}
+  .nf-col.now h3{color:#fff;}
+  .nf-col.now .nf-title{color:#fff;}
+  .nf-col.now .nf-badge{background:rgba(255,255,255,0.12); color:#fff;}
+  .nf-col.now .nf-badge::before{background:#7FB8E0; box-shadow:0 0 0 3px rgba(127,184,224,0.25);}
+  .nf-col.now .nf-list li{border-top-color:rgba(255,255,255,0.12);}
+  html:not([data-theme="dark"]) .nf-col.now .nf-sub{color:var(--text-on-navy-dim);}
+  html:not([data-theme="dark"]) .nf-col.now .nf-col-sub{color:var(--text-on-navy-dim);}
+  [data-theme="dark"] .nf-col.now{background:#123744;}
 </style>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;} .pub-more{display:block !important;}</style></noscript>
 </head>
@@ -1122,7 +1117,7 @@
       <figure class="g-item"><img src="gallery/steering-meeting.jpg" alt="Steering meeting" loading="lazy"><figcaption>Steering meeting</figcaption></figure>
       <figure class="g-item"><img src="gallery/phd-presentation-2016.jpg" alt="Presenting during the PhD period, 2016" loading="lazy"><figcaption>Presenting during the PhD period, 2016</figcaption></figure>
       <figure class="g-item"><img src="gallery/copenhagen-freezer.jpg" alt="Retrieving samples from an ultra-low freezer, University of Copenhagen" loading="lazy"><figcaption>Retrieving samples from an ultra-low freezer, University of Copenhagen</figcaption></figure>
-      <figure class="g-item"><img src="gallery/lab-measurement.jpg" alt="Water quality measurement in the laboratory" loading="lazy"><figcaption>Water quality measurement in the laboratory</figcaption></figure>
+      <figure class="g-item"><img src="gallery/lab-measurement.jpg" alt="Measuring fish flesh colour with a portable chroma meter" loading="lazy"><figcaption>Measuring fish flesh colour with a portable chroma meter</figcaption></figure>
           <figure class="g-item"><img src="gallery/fish-dissection.jpg" alt="Fish dissection in the laboratory" loading="lazy"><figcaption>Fish dissection in the laboratory</figcaption></figure>
       <figure class="g-item"><img src="gallery/prawn-harvest.jpg" alt="A proud harvest of freshwater prawns" loading="lazy"><figcaption>A proud harvest of freshwater prawns</figcaption></figure>
       <figure class="g-item"><img src="gallery/fish-week-rally.jpg" alt="National Fish Week 2023 rally" loading="lazy"><figcaption>National Fish Week 2023 rally</figcaption></figure>
