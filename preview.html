@@ -567,7 +567,7 @@
   .cv-btn:hover{text-decoration:none; background:#35619C;}
   [data-theme="dark"] .cv-btn{background:var(--accent); color:#0B131E;}
   @media (min-width:1080px){
-    .layout{max-width:1300px; padding:0 28px; display:grid; grid-template-columns:300px minmax(0,1fr); gap:42px; align-items:start;}
+    .layout{max-width:1300px; padding:0 28px; display:grid; grid-template-columns:330px minmax(0,1fr); gap:42px; align-items:start;}
     .layout .wrap{max-width:none; padding-left:0; padding-right:0;}
     .layout section{padding:54px 0;}
     .layout section.altband{border-radius:14px; padding-left:30px; padding-right:30px;}
@@ -616,6 +616,36 @@
   /* ---- fix round 4: dark-mode icon and badge tints ---- */
   [data-theme="dark"] .area-icon, [data-theme="dark"] .edu-icon{background:rgba(127,184,224,0.14);}
   [data-theme="dark"] .nf-col.next .nf-badge{background:rgba(127,184,224,0.14);}
+
+  /* ---- fix round 5: browser audit round 1 ---- */
+  .trajectory{gap:10px 8px;}
+  .tstep{display:inline-flex; align-items:center; gap:8px;}
+  .hero-top{align-items:stretch;}
+  .hero-contacts{display:flex; flex-direction:column; justify-content:space-between;}
+  .hero-tagline, .hero-stats-line{text-wrap:balance;}
+  .nf-item-title{display:flex; align-items:flex-start; gap:8px;}
+  .nf-status{flex:none; margin-left:0; margin-top:2px;}
+  .nav-mark{white-space:nowrap;}
+  @media (max-width:900px){
+    .nav-links{
+      position:absolute; top:54px; left:0; right:0;
+      background:var(--navy); flex-direction:column; gap:0;
+      max-height:0; overflow:hidden; transition:max-height .3s ease;
+      border-bottom:1px solid var(--rule-on-navy);
+    }
+    .nav-links.open{max-height:340px;}
+    .nav-links a{display:block; padding:14px 28px; border-top:1px solid var(--rule-on-navy);}
+    .nav-links a.active::after{display:none;}
+    .nav-links a.active{background:rgba(255,255,255,0.06);}
+    .nav-toggle{display:block;}
+  }
+  .card-avail{font-size:0.76rem; padding:6px 10px; white-space:nowrap; letter-spacing:-0.01em;}
+  .theme-toggle{border-color:rgba(255,255,255,0.5); color:#FFD75E; background:rgba(255,255,255,0.07);}
+  .nav-links a.active::after{background:#7FB8E0; height:3px;}
+  [data-theme="dark"] header.hero{background:#14263F; border-bottom:2px solid var(--accent);}
+  [data-theme="dark"] .nf-col.now{background:#243A5C;}
+  [data-theme="dark"] .profile-card{border:1px solid #2E4A66;}
+  [data-theme="dark"] .back-to-top{background:var(--accent); color:#fff; border-color:#7FB8E0;}
 </style>
 </head>
 <body>
@@ -741,12 +771,12 @@
     <div style="margin-top:36px;" class="reveal">
       <div class="eyebrow" style="margin-bottom:12px;">Research trajectory</div>
       <div class="trajectory">
-        <span class="node">Aquaculture production &amp; health</span><span class="arrow">→</span>
-        <span class="node">Food safety &amp; quality</span><span class="arrow">→</span>
-        <span class="node">Environmental monitoring &amp; AMR</span><span class="arrow">→</span>
-        <span class="node">Value chains &amp; policy</span><span class="arrow">→</span>
-        <span class="node">Climate resilience &amp; sustainability</span><span class="arrow">→</span>
-        <span class="node">One Health &amp; adaptive management</span>
+        <span class="tstep"><span class="node">Aquaculture production &amp; health</span></span>
+        <span class="tstep"><span class="arrow">→</span><span class="node">Food safety &amp; quality</span></span>
+        <span class="tstep"><span class="arrow">→</span><span class="node">Environmental monitoring &amp; AMR</span></span>
+        <span class="tstep"><span class="arrow">→</span><span class="node">Value chains &amp; policy</span></span>
+        <span class="tstep"><span class="arrow">→</span><span class="node">Climate resilience &amp; sustainability</span></span>
+        <span class="tstep"><span class="arrow">→</span><span class="node">One Health &amp; adaptive management</span></span>
       </div>
     </div>
 
