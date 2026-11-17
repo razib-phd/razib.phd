@@ -65,7 +65,7 @@
     color:var(--text-dim);
   }
   .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
-  section{padding:72px 0;}
+  section{padding:52px 0;}
   @media (max-width:640px){ section{padding:48px 0;} .wrap{padding:0 20px;} }
 
   /* ---- hero ---- */
@@ -471,7 +471,7 @@
     box-shadow:0 18px 38px -22px rgba(27,42,65,0.45);
   }
   @media (max-width:640px){ .profile-card{margin:34px 20px 0;} }
-  .card-photo{width:92px; height:92px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.85);}
+  .card-photo{width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.85);}
   .card-name{font-family:'Source Serif 4', serif; font-weight:600; font-size:1.28rem; line-height:1.25; margin-top:14px; color:#fff;}
   .card-role{color:var(--text-on-navy-dim); font-size:0.9rem; margin-top:3px;}
   .card-loc{color:var(--text-on-navy-dim); font-size:0.86rem; margin-top:2px;}
@@ -491,9 +491,9 @@
   @media (min-width:1080px){
     .layout{max-width:1300px; padding:0 28px; display:grid; grid-template-columns:330px minmax(0,1fr); gap:42px; align-items:start;}
     .layout .wrap{max-width:none; padding-left:0; padding-right:0;}
-    .layout section{padding:54px 0;}
+    .layout section{padding:36px 0;}
     .layout section.altband{border-radius:14px; padding-left:30px; padding-right:30px;}
-    .profile-card{position:sticky; top:92px; margin:54px 0 0;}
+    .profile-card{position:sticky; top:92px; margin:36px 0 0;}
   }
   .updates-list{border:1px solid var(--rule); border-radius:10px; padding:4px 22px;}
   .update-item{display:flex; gap:18px; padding:13px 0; border-top:1px solid var(--rule);}
@@ -525,7 +525,7 @@
     .nav-links a{font-size:0.9rem;}
   }
   @media (max-width:640px){
-    .card-photo{width:72px; height:72px;}
+    .card-photo{width:88px; height:88px;}
     .card-name{font-size:1.15rem; margin-top:10px;}
     .profile-card{padding:20px 18px;}
     .card-links a{font-size:0.76rem; padding:6px 4px;}
@@ -619,7 +619,8 @@
   /* minor: link pills keep the card pill treatment with stronger text */
   .card-links a{background:#E8EEF4; color:var(--navy); border-color:#C9D4E2; font-weight:600;}
   [data-theme="dark"] .card-links a{background:rgba(255,255,255,0.06); color:#EDEFF2; border-color:var(--rule);}
-  .contact-grid a{border:1px solid var(--rule-on-navy); border-bottom:1px solid var(--rule-on-navy); border-radius:999px; padding:7px 14px; background:rgba(255,255,255,0.05);}
+  .contact-grid a{border:1px solid var(--rule-on-navy); border-bottom:1px solid var(--rule-on-navy); border-radius:999px; padding:9px 16px; background:rgba(255,255,255,0.05); transition:background .18s ease, border-color .18s ease, transform .18s ease;}
+  .contact-grid a:hover{background:rgba(194,160,89,0.16); border-color:#C2A059; transform:translateY(-1px);}
   /* minor: the Earlier Work filter pill no longer wraps onto its own line */
   .pub-filters{flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px;}
   /* minor: availability pill fits the 330px card column */
@@ -1100,27 +1101,27 @@
       <figure class="g-item"><img src="gallery/participatory-mapping.jpg" alt="Participatory mapping with farmers" loading="lazy"><figcaption>Participatory mapping with farmers</figcaption></figure>
       <figure class="g-item"><img src="gallery/focus-group.jpg" alt="Focus group discussion with a coastal community" loading="lazy"><figcaption>Focus group discussion with a coastal community</figcaption></figure>
       <figure class="g-item"><img src="gallery/pond-preparation.jpg" alt="Pond preparation" loading="lazy"><figcaption>Pond preparation</figcaption></figure>
-      <figure class="g-item"><img src="gallery/salt-pans.jpg" alt="Salt pans of Cox's Bazar" loading="lazy"><figcaption>Salt pans of Cox's Bazar</figcaption></figure>
+      <figure class="g-item"><img src="gallery/artemia-pond-sampling.jpg" alt="Collecting samples with a hand net in an earthen Artemia culture pond" loading="lazy"><figcaption>Collecting samples with a hand net in an earthen Artemia culture pond</figcaption></figure>
       <figure class="g-item"><img src="gallery/field-discussion.jpg" alt="Field discussion over a working lunch" loading="lazy"><figcaption>Field discussion over a working lunch</figcaption></figure>
       <figure class="g-item"><img src="gallery/shrimp-sorting.jpg" alt="Sorting the shrimp harvest" loading="lazy"><figcaption>Sorting the shrimp harvest</figcaption></figure>
       <figure class="g-item"><img src="gallery/artemia-tanks.jpg" alt="Artemia culture tanks" loading="lazy"><figcaption>Artemia culture tanks</figcaption></figure>
-      <figure class="g-item"><img src="gallery/tilapia-artemia.jpg" alt="Farmers with tilapia and harvested Artemia" loading="lazy"><figcaption>Farmers with tilapia and harvested Artemia</figcaption></figure>
+      <figure class="g-item"><img src="gallery/tilapia-artemia.jpg" alt="Farmers with their tilapia, shrimp and harvested Artemia" loading="lazy"><figcaption>Farmers with their tilapia, shrimp and harvested Artemia</figcaption></figure>
       <figure class="g-item"><img src="gallery/artemia-beaker.jpg" alt="Freshly harvested Artemia biomass" loading="lazy"><figcaption>Freshly harvested Artemia biomass</figcaption></figure>
-      <figure class="g-item"><img src="gallery/artemia-exhibition.jpg" alt="Artemia4Bangladesh exhibition model" loading="lazy"><figcaption>Artemia4Bangladesh exhibition model</figcaption></figure>
-      <figure class="g-item"><img src="gallery/women-farmers-event.jpg" alt="Women farmers at a project event" loading="lazy"><figcaption>Women farmers at a project event</figcaption></figure>
+      <figure class="g-item"><img src="gallery/artemia-exhibition.jpg" alt="Exhibition model of the integrated salt and Artemia system, Artemia4Bangladesh" loading="lazy"><figcaption>Exhibition model of the integrated salt and Artemia system, Artemia4Bangladesh</figcaption></figure>
+      <figure class="g-item"><img src="gallery/women-farmers-event.jpg" alt="Women farmers marking the 16 Days of Activism to end violence against women" loading="lazy"><figcaption>Women farmers marking the 16 Days of Activism to end violence against women</figcaption></figure>
       <figure class="g-item"><img src="gallery/team-photo.jpg" alt="Project team group photo" loading="lazy"><figcaption>Project team group photo</figcaption></figure>
       <figure class="g-item"><img src="gallery/team-day.jpg" alt="Team day with colleagues" loading="lazy"><figcaption>Team day with colleagues</figcaption></figure>
-      <figure class="g-item"><img src="gallery/delegation-pond.jpg" alt="Delegation group photo at a pond site" loading="lazy"><figcaption>Delegation group photo at a pond site</figcaption></figure>
+      <figure class="g-item"><img src="gallery/delegation-pond.jpg" alt="Delegation group photo at a pond site in Thailand" loading="lazy"><figcaption>Delegation group photo at a pond site in Thailand</figcaption></figure>
           <figure class="g-item"><img src="gallery/thai-facility-visit.jpg" alt="Visit to a Thai aquaculture facility" loading="lazy"><figcaption>Visit to a Thai aquaculture facility</figcaption></figure>
       <figure class="g-item"><img src="gallery/workshop-group.jpg" alt="Workshop group photo" loading="lazy"><figcaption>Workshop group photo</figcaption></figure>
-      <figure class="g-item"><img src="gallery/presentation-session.jpg" alt="Project presentation session" loading="lazy"><figcaption>Project presentation session</figcaption></figure>
-      <figure class="g-item"><img src="gallery/steering-meeting.jpg" alt="Steering meeting" loading="lazy"><figcaption>Steering meeting</figcaption></figure>
-      <figure class="g-item"><img src="gallery/phd-presentation-2016.jpg" alt="Presenting during the PhD period, 2016" loading="lazy"><figcaption>Presenting during the PhD period, 2016</figcaption></figure>
+      <figure class="g-item"><img src="gallery/presentation-session.jpg" alt="Artemia4Bangladesh project presentation at a stakeholder meeting" loading="lazy"><figcaption>Artemia4Bangladesh project presentation at a stakeholder meeting</figcaption></figure>
+      <figure class="g-item"><img src="gallery/steering-meeting.jpg" alt="Meeting with the Department of Fisheries, Thailand" loading="lazy"><figcaption>Meeting with the Department of Fisheries, Thailand</figcaption></figure>
+      <figure class="g-item"><img src="gallery/phd-presentation-2016.jpg" alt="During the PhD period, University of Copenhagen, 2016" loading="lazy"><figcaption>During the PhD period, University of Copenhagen, 2016</figcaption></figure>
       <figure class="g-item"><img src="gallery/copenhagen-freezer.jpg" alt="Retrieving samples from an ultra-low freezer, University of Copenhagen" loading="lazy"><figcaption>Retrieving samples from an ultra-low freezer, University of Copenhagen</figcaption></figure>
       <figure class="g-item"><img src="gallery/lab-measurement.jpg" alt="Measuring fish flesh colour with a portable chroma meter" loading="lazy"><figcaption>Measuring fish flesh colour with a portable chroma meter</figcaption></figure>
           <figure class="g-item"><img src="gallery/fish-dissection.jpg" alt="Fish dissection in the laboratory" loading="lazy"><figcaption>Fish dissection in the laboratory</figcaption></figure>
-      <figure class="g-item"><img src="gallery/prawn-harvest.jpg" alt="A proud harvest of freshwater prawns" loading="lazy"><figcaption>A proud harvest of freshwater prawns</figcaption></figure>
-      <figure class="g-item"><img src="gallery/fish-week-rally.jpg" alt="National Fish Week 2023 rally" loading="lazy"><figcaption>National Fish Week 2023 rally</figcaption></figure>
+      <figure class="g-item"><img src="gallery/shrimp-harvest.jpg" alt="A proud harvest of black tiger shrimp" loading="lazy"><figcaption>A proud harvest of black tiger shrimp</figcaption></figure>
+      <figure class="g-item"><img src="gallery/fish-week-rally.jpg" alt="National Fish Week 2023 rally, Cox's Bazar" loading="lazy"><figcaption>National Fish Week 2023 rally, Cox's Bazar</figcaption></figure>
     </div>
   </section>
 
